@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>単語・意味・語源一覧</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="container">
+    <div class="top-bar">
+      <a href="index.html" class="back-link">← トップへ戻る</a>
+      <div class="level-label">全レベル一覧</div>
+    </div>
+
+    <div id="allLists">
+      <div class="final-table-wrapper">
+        <div class="final-title">読み込み中...</div>
+      </div>
+    </div>
+  </main>
+
+  <script>
+    const fileNames = [
+      "data-level1.js",
+      "data-level2.js",
+      "data-level3.js",
+      "data-level4.js",
+      "data-level5.js",
+      "data-level6.js",
+      "data-level7.js",
+      "data-level8.js",
+      "data-level9.js",
+      "data-level10.js"
+    ];
+
+    const levelLabels = [
+      "Level 1",
+      "Level 2",
+      "Level 3",
+      "Level 4",
+      "Level 5",
+      "Level 6",
+      "Level 7",
+      "Level 8",
+      "Level 9 / C2",
+      "Level 10 / 医学用語"
+    ];
+
+    function escapeHtml(value) {
+      return String(value)
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+        .replace(/"/g, "&quot;")
+        .replace(/'/g, "&#39;");
+    }
+
+    function loadScript(src) {
+      return new Promise((resolve, reject) => {
+        const script = document.createElement("script");
+        script.src = src + "?v=" + Date.now();
+        script.onload = () => resolve();
+        script.onerror = () => reject(new Error(src + " の読み込みに失敗しました"));
+        document.body.appendChild(script);
+      });
+    }
+
+    async function loadAllLevels() {
+      const allListsEl = document.getElementById("allLists");
+      const sections = [];
+
+      for (let i = 0; i < fileNames.length; i++) {
+        window.quizData = undefined;
+        await loadScript(fileNames[i]);
+
+        let rows = "";
+
+        if (Array.isArray(window.quizData) && window.quizData.length > 0) {
+          rows = window.quizData.map((item, index) => `
+            <tr>
+              <td>${index + 1}</td>
+              <td>${escapeHtml(item.word)}</td>
+              <td>${escapeHtml(item.correct)}</td>
+              <td>${escapeHtml(item.etymology)}</td>
+            </tr>
+          `).join("");
+        } else {
+          rows = `
+            <tr>
+              <td colspan="4">データがありません。</td>
+            </tr>
+          `;
+        }
+
+        sections.push(`
+          <div class="final-table-wrapper" style="margin-bottom: 28px;">
+            <div class="final-title">${escapeHtml(levelLabels[i])}</div>
+            <table class="final-table">
+              <thead>
+                <tr>
+                  <th style="width: 80px;">No.</th>
+                  <th style="width: 220px;">単語</th>
+                  <th style="width: 220px;">意味</th>
+                  <th>語源</th>
+                </tr>
+              </thead>
+              <tbody>
+                ${rows}
+              </tbody>
+            </table>
+          </div>
+        `);
+      }
+
+      allListsEl.innerHTML = sections.join("");
+    }
+
+    loadAllLevels().catch((error) => {
+      document.getElementById("allLists").innerHTML = `
+        <div class="final-table-wrapper">
+          <div class="final-title">エラー</div>
+          <div>${escapeHtml(error.message)}</div>
+        </div>
+      `;
+    });
+  </script>
+</body>
+</html>
