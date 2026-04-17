@@ -1,4 +1,4 @@
-[
+window.quizData = [
   {
     word: "doubt",
     correct: "疑う",
