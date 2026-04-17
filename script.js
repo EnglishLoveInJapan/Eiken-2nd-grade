@@ -488,7 +488,7 @@ if (!Array.isArray(window.quizData) || window.quizData.length === 0) {
     // 正解・語源・例文1文表示
     explanationEl.innerHTML = `
       <div class="answer-line">${escapeHtml(currentQuestion.word)} = ${escapeHtml(currentQuestion.correct)}</div>
-      <div class="etymology-line">語源: ${escapeHtml(currentQuestion.etymology)}</div>
+      <div class="etymology-line"> ${escapeHtml(currentQuestion.etymology)}</div>
       <div class="example-block">
         ${escapeHtml(currentQuestion.example1)}<br>
         ${escapeHtml(currentQuestion.jp1)}
