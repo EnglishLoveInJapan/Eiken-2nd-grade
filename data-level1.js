@@ -1,4 +1,4 @@
-[
+window.quizData = [
   {
     word: "charge",
     correct: "課す",
