@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>語源クイズ</title>
+  <link rel="stylesheet" href="style.css?v=80">
+</head>
+<body>
+  <main class="container">
+
+<div class="top-bar">
+  <div class="top-mini-buttons">
+    <button type="button" class="mini-top-button" id="finishNowBtn">結果を見る</button>
+    <button type="button" class="mini-top-button" onclick="location.href='./index.html'">トップへ戻る</button>
+  </div>
+  <div class="top-controls">
+    <div class="level-label" id="levelLabel"></div>
+    <button id="soundToggleBtn" class="sound-toggle" type="button">音声 OFF</button>
+  </div>
+</div>
+
+    <div class="progress" id="progress"></div>
+    <div id="timerBar" class="timer-bar hidden"></div>
+
+    <div class="word-card">
+      <div class="word" id="word"></div>
+
+      <div class="choices">
+        <button id="choice0" type="button"></button>
+        <button id="choice1" type="button"></button>
+      </div>
+
+      <div id="message" class="message hidden">
+        <span id="messageText"></span>
+        <button id="inlineNextBtn" class="inline-next hidden" type="button">次へ</button>
+      </div>
+    </div>
+
+    <div class="explanation hidden" id="explanation"></div>
+  </main>
+
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const level = params.get("level") || "1";
+
+    const levelLabelMap = {
+      "1": "Level 1",
+      "2": "Level 2",
+      "3": "Level 3",
+      "4": "Level 4",
+      "5": "Level 5",
+      "6": "Level 6",
+      "7": "Level 7",
+      "8": "Level 8",
+      "9": "Level 9 / C2",
+      "10": "Level 10 / 医学用語"
+    };
+
+    document.getElementById("levelLabel").textContent =
+      levelLabelMap[level] || `Level ${level}`;
+
+    const allowedLevels = ["1","2","3","4","5","6","7","8","9","10"];
+    const safeLevel = allowedLevels.includes(level) ? level : "1";
+    const stamp = Date.now();
+
+    const dataScript = document.createElement("script");
+    dataScript.src = `./data-level${safeLevel}.js?v=${stamp}`;
+
+    dataScript.onerror = function () {
+      document.getElementById("progress").textContent = "data 読み込み失敗";
+      document.getElementById("word").textContent = `data-level${safeLevel}.js が見つかりません`;
+    };
+
+    dataScript.onload = function () {
+      const mainScript = document.createElement("script");
+      mainScript.src = `./script.js?v=${stamp}`;
+
+      mainScript.onerror = function () {
+        document.getElementById("progress").textContent = "JS 読み込み失敗";
+        document.getElementById("word").textContent = "script.js が見つかりません";
+      };
+
+      document.body.appendChild(mainScript);
+    };
+
+    document.body.appendChild(dataScript);
+  </script>
+</body>
+</html>
