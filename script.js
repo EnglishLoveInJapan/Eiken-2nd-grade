@@ -3,13 +3,13 @@
 // ==============================
 
 // 不正解後に自動で次へ進むまでの時間（ミリ秒）
-const AUTO_NEXT_MS = 2000;
+const AUTO_NEXT_MS = 3000;
 
 // 音声読み上げの言語設定
 const SPEAK_LANG = "en-US";
 
 // カウントダウン開始数
-const TIMER_START = 5;
+const TIMER_START = 10;
 
 // カウントダウンの1ステップの長さ（ミリ秒）
 const TIMER_STEP_MS = 1000;
@@ -497,7 +497,7 @@ if (!Array.isArray(window.quizData) || window.quizData.length === 0) {
     explanationEl.classList.remove("hidden");
 
     // 少しだけ見せて次へ
-    scheduleNext(600);
+    scheduleNext(2000);
   }
 
 
