@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>語源クイズ レベル選択</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="container">
+    <div class="home-card">
+      <h1 class="home-title">語源クイズ</h1>
+      <p class="home-subtitle">レベルを選んでください</p>
+
+      <div class="level-grid">
+        <a class="level-button level-link" data-level="1" href="#">Level 1</a>
+        <a class="level-button level-link" data-level="2" href="#">Level 2</a>
+        <a class="level-button level-link" data-level="3" href="#">Level 3</a>
+        <a class="level-button level-link" data-level="4" href="#">Level 4</a>
+        <a class="level-button level-link" data-level="5" href="#">Level 5</a>
+        <a class="level-button level-link" data-level="6" href="#">Level 6</a>
+        <a class="level-button level-link" data-level="7" href="#">Level 7</a>
+        <a class="level-button level-link" data-level="8" href="#">Level 8</a>
+        <a class="level-button level-link special-button" data-level="9" href="#">Level 9<br>C2</a>
+        <a class="level-button level-link medical-button" data-level="10" href="#">Level 10<br>医学用語</a>
+      </div>
+
+      <div style="text-align:center; margin-top: 28px;">
+        <a href="./list-all.html" style="font-size:18px; font-weight:700;">
+          単語と語源を一覧表示
+        </a>
+      </div>
+
+      <div id="modeInfo" style="text-align:center; margin-top: 14px; font-size:14px; color:#555;"></div>
+    </div>
+  </main>
+
+  <script>
+    function isLiteMode() {
+      const ua = navigator.userAgent || "";
+      const isiPhone = /iPhone/i.test(ua);
+      const isAndroidPhone = /Android/i.test(ua) && /Mobile/i.test(ua);
+      return isiPhone || isAndroidPhone;
+    }
+
+    const liteMode = isLiteMode();
+    const pageName = liteMode ? "quiz-lite.html" : "quiz.html";
+
+    document.querySelectorAll(".level-link").forEach(link => {
+      const level = link.dataset.level;
+      link.href = `./${pageName}?level=${encodeURIComponent(level)}`;
+    });
+
+    document.getElementById("modeInfo").textContent =
+      liteMode
+        ? "スマホ向けライト版で開きます"
+        : "iPad / PC 向け通常版で開きます";
+  </script>
+</body>
+</html>
