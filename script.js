@@ -50,7 +50,6 @@ const currentLevel = new URLSearchParams(window.location.search).get("level") ||
 const STORAGE_KEY = `etymology_quiz_mastered_level_${currentLevel}`;
 
 
-//
 // ==============================
 // 文字列を安全にHTML表示するための関数
 // ==============================
@@ -148,12 +147,13 @@ function updateSoundButton() {
 
 
 // ==============================
-// 単語読み上げ
+// 英文読み上げ
 // ==============================
 
-function speakWord(text) {
+function speakText(text) {
   if (!soundEnabled) return;
   if (!("speechSynthesis" in window)) return;
+  if (!text) return;
 
   window.speechSynthesis.cancel();
 
@@ -214,8 +214,8 @@ if (soundToggleBtnEl) {
       window.speechSynthesis.cancel();
     }
 
-    if (soundEnabled && wordEl.textContent.trim()) {
-      speakWord(wordEl.textContent.trim());
+    if (soundEnabled && currentQuestion && currentQuestion.example1) {
+      speakText(currentQuestion.example1);
     }
   };
 
@@ -333,7 +333,8 @@ if (!Array.isArray(window.quizData) || window.quizData.length === 0) {
 
     wordEl.textContent = currentQuestion.word;
 
-    speakWord(currentQuestion.word);
+    // 音声ONなら英文を読む
+    speakText(currentQuestion.example1);
 
     choice0El.textContent = currentChoices[0];
     choice1El.textContent = currentChoices[1];
