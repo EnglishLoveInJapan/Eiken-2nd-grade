@@ -3,7 +3,7 @@
 // ==============================
 
 // 不正解後に自動で次へ進むまでの時間（ミリ秒）
-const AUTO_NEXT_MS = 3000;
+const AUTO_NEXT_MS = 2000;
 
 // 音声読み上げの言語設定
 const SPEAK_LANG = "en-US";
@@ -36,9 +36,16 @@ const finishNowBtnEl = document.getElementById("finishNowBtn");
 // 内部状態
 // ==============================
 
+// 自動送り用タイマー
 let autoNextTimer = null;
+
+// カウントダウン用タイマー
 let countdownTimer = null;
+
+// 今の残り秒数表示
 let countdownRemaining = TIMER_START;
+
+// 音声ON/OFF状態
 let soundEnabled = false;
 
 
@@ -46,7 +53,10 @@ let soundEnabled = false;
 // レベルと保存キー
 // ==============================
 
+// URLパラメータから level を取る
 const currentLevel = new URLSearchParams(window.location.search).get("level") || "1";
+
+// localStorage に保存するときのキー
 const STORAGE_KEY = `etymology_quiz_mastered_level_${currentLevel}`;
 
 
@@ -82,6 +92,7 @@ function shuffleArray(array) {
 // タイマー停止関数
 // ==============================
 
+// 自動送りタイマーを止める
 function clearAutoNextTimer() {
   if (autoNextTimer !== null) {
     clearTimeout(autoNextTimer);
@@ -89,6 +100,7 @@ function clearAutoNextTimer() {
   }
 }
 
+// カウントダウンタイマーを止める
 function clearCountdownTimer() {
   if (countdownTimer !== null) {
     clearInterval(countdownTimer);
@@ -101,11 +113,13 @@ function clearCountdownTimer() {
 // カウントダウン表示関数
 // ==============================
 
+// 右下の数字を更新する
 function renderTimerBar() {
   if (!timerBarEl) return;
   timerBarEl.textContent = countdownRemaining > 0 ? String(countdownRemaining) : "";
 }
 
+// カウントダウン開始
 function startCountdown() {
   clearCountdownTimer();
 
@@ -121,6 +135,7 @@ function startCountdown() {
     countdownRemaining -= 1;
     renderTimerBar();
 
+    // 0になったら自動で答えを表示
     if (countdownRemaining <= 0) {
       clearCountdownTimer();
       autoRevealAnswer();
@@ -147,21 +162,26 @@ function updateSoundButton() {
 
 
 // ==============================
-// 英文読み上げ
+// 単語読み上げ
 // ==============================
 
-function speakText(text) {
+function speakWord(text) {
+  // 音声OFFなら何もしない
   if (!soundEnabled) return;
-  if (!("speechSynthesis" in window)) return;
-  if (!text) return;
 
+  // speechSynthesis が使えない環境では何もしない
+  if (!("speechSynthesis" in window)) return;
+
+  // 前の読み上げを止める
   window.speechSynthesis.cancel();
 
+  // 新しい読み上げを作る
   const utterance = new SpeechSynthesisUtterance(text);
   utterance.lang = SPEAK_LANG;
   utterance.rate = 0.9;
   utterance.pitch = 1.0;
 
+  // 読み上げ開始
   window.speechSynthesis.speak(utterance);
 }
 
@@ -170,6 +190,7 @@ function speakText(text) {
 // localStorage 読み書き
 // ==============================
 
+// そのレベルで「一度でも正解した単語」を読み込む
 function loadMasteredWords() {
   try {
     const raw = localStorage.getItem(STORAGE_KEY);
@@ -184,19 +205,21 @@ function loadMasteredWords() {
   }
 }
 
+// 「一度でも正解した単語」を保存する
 function saveMasteredWords(masteredWords) {
   try {
     localStorage.setItem(STORAGE_KEY, JSON.stringify([...masteredWords]));
   } catch (e) {
-    // 保存失敗でも止めない
+    // 保存に失敗しても処理は止めない
   }
 }
 
+// そのレベルの保存を消す
 function clearMasteredWords() {
   try {
     localStorage.removeItem(STORAGE_KEY);
   } catch (e) {
-    // 削除失敗でも止めない
+    // 削除失敗でも処理は止めない
   }
 }
 
@@ -207,15 +230,18 @@ function clearMasteredWords() {
 
 if (soundToggleBtnEl) {
   soundToggleBtnEl.onclick = () => {
+    // ON/OFF切り替え
     soundEnabled = !soundEnabled;
     updateSoundButton();
 
+    // OFFになったら今の読み上げを止める
     if (!soundEnabled && "speechSynthesis" in window) {
       window.speechSynthesis.cancel();
     }
 
-    if (soundEnabled && currentQuestion && currentQuestion.example1) {
-      speakText(currentQuestion.example1);
+    // ONにした瞬間、今表示中の単語を読む
+    if (soundEnabled && wordEl.textContent.trim()) {
+      speakWord(wordEl.textContent.trim());
     }
   };
 
@@ -241,15 +267,24 @@ if (!Array.isArray(window.quizData) || window.quizData.length === 0) {
   // クイズ本体
   // =====================================
 
+  // そのレベルの全単語をシャッフル
   const allQuestions = shuffleArray([...window.quizData]);
+
+  // 総単語数
   const totalQuestions = allQuestions.length;
+
+  // 以前保存された「正解済み単語」を読み込む
   const masteredWords = loadMasteredWords();
 
+  // まだ正解していない単語だけを出題候補にする
   let questionQueue = shuffleArray(
     allQuestions.filter(q => !masteredWords.has(q.word))
   );
 
+  // 今出している問題
   let currentQuestion = null;
+
+  // 今の2択
   let currentChoices = [];
 
 
@@ -300,6 +335,7 @@ if (!Array.isArray(window.quizData) || window.quizData.length === 0) {
     while (questionQueue.length > 0) {
       const nextQuestion = questionQueue.shift();
 
+      // すでに正解済みなら飛ばす
       if (!masteredWords.has(nextQuestion.word)) {
         return nextQuestion;
       }
@@ -315,6 +351,7 @@ if (!Array.isArray(window.quizData) || window.quizData.length === 0) {
     clearAutoNextTimer();
     clearCountdownTimer();
 
+    // 全単語を正解済みなら終了
     if (masteredWords.size >= totalQuestions) {
       showFinalPage(false);
       return;
@@ -322,39 +359,49 @@ if (!Array.isArray(window.quizData) || window.quizData.length === 0) {
 
     currentQuestion = getNextUnmasteredQuestion();
 
+    // もう出題候補がないなら終了
     if (!currentQuestion) {
       showFinalPage(false);
       return;
     }
 
+    // 2択をシャッフル
     currentChoices = shuffleArray(currentQuestion.choices);
 
+    // 進捗更新
     updateProgress();
 
+    // 単語表示
     wordEl.textContent = currentQuestion.word;
 
-    // 音声ONなら英文を読む
-    speakText(currentQuestion.example1);
+    // 音声ONなら読む
+    speakWord(currentQuestion.word);
 
+    // 選択肢表示
     choice0El.textContent = currentChoices[0];
     choice1El.textContent = currentChoices[1];
 
+    // ボタンを有効化
     choice0El.disabled = false;
     choice1El.disabled = false;
     choice0El.classList.remove("hidden");
     choice1El.classList.remove("hidden");
 
+    // メッセージ・解説を消す
     resetMessage();
     explanationEl.classList.add("hidden");
     explanationEl.innerHTML = "";
 
+    // タイマー表示を出す
     if (timerBarEl) {
       timerBarEl.classList.remove("hidden");
     }
 
+    // ボタンのクリック先を更新
     choice0El.onclick = () => checkAnswer(currentChoices[0]);
     choice1El.onclick = () => checkAnswer(currentChoices[1]);
 
+    // カウントダウン開始
     startCountdown();
   }
 
@@ -363,22 +410,24 @@ if (!Array.isArray(window.quizData) || window.quizData.length === 0) {
   // 時間切れ処理
   // ------------------------------
   function autoRevealAnswer() {
-    if (timerBarEl) {
-      timerBarEl.classList.add("hidden");
-    }
+    if (timerBarEl) timerBarEl.classList.add("hidden");
 
     choice0El.disabled = true;
     choice1El.disabled = true;
 
+    // メッセージは出さず、次へボタンだけ出す
     messageTextEl.textContent = "";
     messageEl.classList.add("hidden");
     inlineNextBtnEl.classList.remove("hidden");
 
+    // 正解と語源を表示
     explanationEl.innerHTML = `
       <div class="answer-line">${escapeHtml(currentQuestion.word)} = ${escapeHtml(currentQuestion.correct)}</div>
+      <div class="etymology-line">語源: ${escapeHtml(currentQuestion.etymology)}</div>
     `;
     explanationEl.classList.remove("hidden");
 
+    // まだ正解していないなら再出題キューに戻す
     if (!masteredWords.has(currentQuestion.word)) {
       questionQueue.push(currentQuestion);
     }
@@ -393,9 +442,7 @@ if (!Array.isArray(window.quizData) || window.quizData.length === 0) {
   function checkAnswer(selected) {
     clearCountdownTimer();
 
-    if (timerBarEl) {
-      timerBarEl.classList.add("hidden");
-    }
+    if (timerBarEl) timerBarEl.classList.add("hidden");
 
     choice0El.disabled = true;
     choice1El.disabled = true;
@@ -409,12 +456,12 @@ if (!Array.isArray(window.quizData) || window.quizData.length === 0) {
       messageTextEl.textContent = "Try again !";
 
       explanationEl.innerHTML = `
-        <div class="answer-line" style="color: red; font-weight: bold;">
-          ${escapeHtml(currentQuestion.word)} = ${escapeHtml(currentQuestion.correct)}
-        </div>
+        <div class="answer-line">${escapeHtml(currentQuestion.word)} = ${escapeHtml(currentQuestion.correct)}</div>
+        <div class="etymology-line">語源: ${escapeHtml(currentQuestion.etymology)}</div>
       `;
       explanationEl.classList.remove("hidden");
 
+      // 未正解なら再出題キューへ
       if (!masteredWords.has(currentQuestion.word)) {
         questionQueue.push(currentQuestion);
       }
@@ -425,7 +472,11 @@ if (!Array.isArray(window.quizData) || window.quizData.length === 0) {
 
     // 正解
     masteredWords.add(currentQuestion.word);
+
+    // localStorage に保存
     saveMasteredWords(masteredWords);
+
+    // 進捗更新
     updateProgress();
 
     messageEl.classList.remove("hidden");
@@ -434,16 +485,19 @@ if (!Array.isArray(window.quizData) || window.quizData.length === 0) {
     inlineNextBtnEl.classList.add("hidden");
     messageTextEl.textContent = "Excellent!";
 
+    // 正解・語源・例文1文表示
     explanationEl.innerHTML = `
       <div class="answer-line">${escapeHtml(currentQuestion.word)} = ${escapeHtml(currentQuestion.correct)}</div>
+      <div class="etymology-line">語源: ${escapeHtml(currentQuestion.etymology)}</div>
       <div class="example-block">
-        ${escapeHtml(currentQuestion.example1 || "")}<br>
-        ${escapeHtml(currentQuestion.jp1 || "")}
+        ${escapeHtml(currentQuestion.example1)}<br>
+        ${escapeHtml(currentQuestion.jp1)}
       </div>
     `;
     explanationEl.classList.remove("hidden");
 
-    scheduleNext(2000);
+    // 少しだけ見せて次へ
+    scheduleNext(1000);
   }
 
 
@@ -454,6 +508,7 @@ if (!Array.isArray(window.quizData) || window.quizData.length === 0) {
     clearAutoNextTimer();
     clearCountdownTimer();
 
+    // 読み上げ停止
     if ("speechSynthesis" in window) {
       window.speechSynthesis.cancel();
     }
@@ -462,23 +517,25 @@ if (!Array.isArray(window.quizData) || window.quizData.length === 0) {
       timerBarEl.classList.add("hidden");
     }
 
+    // 一覧表を作る
     const rows = allQuestions.map((q) => {
       const mark = masteredWords.has(q.word) ? "○" : "";
-
       return `
         <tr>
           <td>${mark}</td>
           <td>${escapeHtml(q.word)}</td>
           <td>${escapeHtml(q.correct)}</td>
-          <td>${escapeHtml(q.example1 || "")}</td>
+          <td>${escapeHtml(q.etymology)}</td>
         </tr>
       `;
     }).join("");
 
+    // 途中終了か、通常終了かで文言を変える
     const summaryText = isEarlyFinish
       ? `途中終了しました。全${totalQuestions}問中 ${masteredWords.size}問正解済みです。`
       : `全${totalQuestions}問中 ${masteredWords.size}問正解しました。`;
 
+    // 結果画面に差し替える
     document.querySelector(".container").innerHTML = `
       <div class="top-bar" style="margin-bottom: 20px;">
         <button type="button" class="back-link-button" onclick="location.href='./index.html'">← トップへ戻る</button>
@@ -495,7 +552,7 @@ if (!Array.isArray(window.quizData) || window.quizData.length === 0) {
               <th style="width: 70px;">印</th>
               <th>単語</th>
               <th>意味</th>
-              <th>英文</th>
+              <th>語源</th>
             </tr>
           </thead>
           <tbody>
@@ -510,6 +567,7 @@ if (!Array.isArray(window.quizData) || window.quizData.length === 0) {
       </div>
     `;
 
+    // 保存を消してやり直す用
     window.resetLevelProgress = function () {
       clearMasteredWords();
       location.href = `./quiz.html?level=${encodeURIComponent(currentLevel)}`;
