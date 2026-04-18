@@ -30,6 +30,7 @@ const inlineNextBtnEl = document.getElementById("inlineNextBtn");
 const explanationEl = document.getElementById("explanation");
 const soundToggleBtnEl = document.getElementById("soundToggleBtn");
 const finishNowBtnEl = document.getElementById("finishNowBtn");
+const resetNowBtnEl = document.getElementById("resetNowBtn");
 
 
 // ==============================
@@ -315,7 +316,17 @@ if (!Array.isArray(window.quizData) || window.quizData.length === 0) {
     clearCountdownTimer();
     showQuestion();
   }
+  
+if (resetNowBtnEl) {
+  resetNowBtnEl.onclick = () => {
+    const ok = window.confirm("このレベルの記録を消して最初からやり直しますか？");
+    if (!ok) return;
 
+    clearMasteredWords();
+    location.href = `./quiz.html?level=${encodeURIComponent(currentLevel)}`;
+  };
+}
+  
 
   // ------------------------------
   // 一定時間後に自動で次へ
