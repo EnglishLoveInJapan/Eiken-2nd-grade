@@ -1,410 +1,82 @@
 window.quizData = [
-  {
-    word: "invest",
-    correct: "投資する",
-    choices: ["投資する", "を隠す"],
-    etymology: "インベスト",
-    example1: "They invested in stocks.",
-    jp1: "彼らは株に投資しました。"
-  },
-  {
-    word: "reserve",
-    correct: "を予約する",
-    choices: ["を予約する", "を育てる"],
-    etymology: "リザーブ",
-    example1: "Please reserve a seat.",
-    jp1: "席を予約してください。"
-  },
-  {
-    word: "concentrate",
-    correct: "集中する",
-    choices: ["集中する", "を繰り返す"],
-    etymology: "コンセントレイト",
-    example1: "Please concentrate on your work.",
-    jp1: "仕事に集中してください。"
-  },
-  {
-    word: "shape",
-    correct: "を形作る",
-    choices: ["を形作る", "を延期する"],
-    etymology: "シェイプ",
-    example1: "Rain shaped the land.",
-    jp1: "雨がその土地の形を作りました。"
-  },
-  {
-    word: "deny",
-    correct: "を否定する",
-    choices: ["を否定する", "を飾る"],
-    etymology: "ディナイ",
-    example1: "He denied the claim.",
-    jp1: "彼はその主張を否定しました。"
-  },
-  {
-    word: "monitor",
-    correct: "を監視する",
-    choices: ["を監視する", "を抱く"],
-    etymology: "モニター",
-    example1: "Nurses monitor patients.",
-    jp1: "看護師は患者を見守ります。"
-  },
-  {
-    word: "confuse",
-    correct: "を当惑させる",
-    choices: ["を当惑させる", "を救う"],
-    etymology: "コンフューズ",
-    example1: "The map confused me.",
-    jp1: "その地図で私は混乱しました。"
-  },
-  {
-    word: "identify",
-    correct: "を特定する",
-    choices: ["を特定する", "を届ける"],
-    etymology: "アイデンティファイ",
-    example1: "Police identified the man.",
-    jp1: "警察はその男を特定しました。"
-  },
-  {
-    word: "emphasize",
-    correct: "を強調する",
-    choices: ["を強調する", "を配置する"],
-    etymology: "エンファサイズ",
-    example1: "Teachers emphasize reading.",
-    jp1: "先生たちは読むことを重視します。"
-  },
-  {
-    word: "recommend",
-    correct: "を勧める",
-    choices: ["を勧める", "を失う"],
-    etymology: "レコメンド",
-    example1: "I recommend this book.",
-    jp1: "私はこの本を勧めます。"
-  },
-  {
-    word: "succeed",
-    correct: "成功する",
-    choices: ["成功する", "を数える"],
-    etymology: "サクシード",
-    example1: "She succeeded at last.",
-    jp1: "彼女はついに成功しました。"
-  },
-  {
-    word: "preserve",
-    correct: "を保存する",
-    choices: ["を保存する", "を比較する"],
-    etymology: "プリザーブ",
-    example1: "This law preserves nature.",
-    jp1: "この法律は自然を守ります。"
-  },
-  {
-    word: "appeal",
-    correct: "訴える",
-    choices: ["訴える", "を温める"],
-    etymology: "アピール",
-    example1: "This idea appeals to me.",
-    jp1: "この考えは私に強く訴えます。"
-  },
-  {
-    word: "expand",
-    correct: "拡大する",
-    choices: ["拡大する", "を雇う"],
-    etymology: "エクスパンド",
-    example1: "The company expanded fast.",
-    jp1: "その会社は急速に拡大しました。"
-  },
-  {
-    word: "measure",
-    correct: "を測る",
-    choices: ["を測る", "を並べる"],
-    etymology: "メジャー",
-    example1: "We measured the room.",
-    jp1: "私たちは部屋の大きさを測りました。"
-  },
-  {
-    word: "reflect",
-    correct: "を反映する",
-    choices: ["を反映する", "を予約する"],
-    etymology: "リフレクト",
-    example1: "The mirror reflects light.",
-    jp1: "その鏡は光を反射します。"
-  },
-  {
-    word: "adopt",
-    correct: "を採用する",
-    choices: ["を採用する", "を沈める"],
-    etymology: "アダプト",
-    example1: "They adopted a new plan.",
-    jp1: "彼らは新しい計画を採用しました。"
-  },
-  {
-    word: "rescue",
-    correct: "を救助する",
-    choices: ["を救助する", "を磨く"],
-    etymology: "レスキュー",
-    example1: "Firefighters rescued the child.",
-    jp1: "消防士たちはその子を救助しました。"
-  },
-  {
-    word: "strengthen",
-    correct: "を強くする",
-    choices: ["を強くする", "を修理する"],
-    etymology: "ストレングン",
-    example1: "Exercise strengthens muscles.",
-    jp1: "運動は筋肉を強くします。"
-  },
-  {
-    word: "puzzle",
-    correct: "を当惑させる",
-    choices: ["を当惑させる", "を承認する"],
-    etymology: "パズル",
-    example1: "The question puzzled me.",
-    jp1: "その質問は私を困らせました。"
-  },
-  {
-    word: "appreciate",
-    correct: "を感謝する",
-    choices: ["を感謝する", "を混ぜる"],
-    etymology: "アプリシエイト",
-    example1: "I appreciate your help.",
-    jp1: "あなたの助けに感謝します。"
-  },
-  {
-    word: "inject",
-    correct: "を注入する",
-    choices: ["を注入する", "を運ぶ"],
-    etymology: "インジェクト",
-    example1: "Doctors injected the medicine.",
-    jp1: "医師たちは薬を注射しました。"
-  },
-  {
-    word: "regret",
-    correct: "を後悔する",
-    choices: ["を後悔する", "を確認する"],
-    etymology: "リグレット",
-    example1: "I regret my words.",
-    jp1: "私は自分の言葉を後悔しています。"
-  },
-  {
-    word: "request",
-    correct: "を頼む",
-    choices: ["を頼む", "を保つ"],
-    etymology: "リクエスト",
-    example1: "She requested more time.",
-    jp1: "彼女はもっと時間を求めました。"
-  },
-  {
-    word: "impose",
-    correct: "を課す",
-    choices: ["を課す", "を達成する"],
-    etymology: "インポーズ",
-    example1: "The city imposed a tax.",
-    jp1: "市は税を課しました。"
-  },
-  {
-    word: "educate",
-    correct: "を教育する",
-    choices: ["を教育する", "を減らす"],
-    etymology: "エジュケイト",
-    example1: "Parents educate their children.",
-    jp1: "親は子どもを教育します。"
-  },
-  {
-    word: "restore",
-    correct: "を修復する",
-    choices: ["を修復する", "を混乱させる"],
-    etymology: "リストア",
-    example1: "They restored the painting.",
-    jp1: "彼らはその絵を修復しました。"
-  },
-  {
-    word: "observe",
-    correct: "を観察する",
-    choices: ["を観察する", "を保存する"],
-    etymology: "オブザーブ",
-    example1: "We observed the stars.",
-    jp1: "私たちは星を観察しました。"
-  },
-  {
-    word: "decline",
-    correct: "衰退する",
-    choices: ["衰退する", "を雇う"],
-    etymology: "ディクライン",
-    example1: "Sales declined last year.",
-    jp1: "売り上げは去年落ちました。"
-  },
-  {
-    word: "resist",
-    correct: "に抵抗する",
-    choices: ["に抵抗する", "を整える"],
-    etymology: "リジスト",
-    example1: "He resisted the pressure.",
-    jp1: "彼は圧力に抵抗しました。"
-  },
-  {
-    word: "pursue",
-    correct: "を追い求める",
-    choices: ["を追い求める", "を公開する"],
-    etymology: "パースー",
-    example1: "She pursued her dream.",
-    jp1: "彼女は夢を追い続けました。"
-  },
-  {
-    word: "ignore",
-    correct: "を無視する",
-    choices: ["を無視する", "を反対する"],
-    etymology: "イグノア",
-    example1: "Do not ignore the problem.",
-    jp1: "その問題を無視しないでください。"
-  },
-  {
-    word: "supply",
-    correct: "を供給する",
-    choices: ["を供給する", "を分析する"],
-    etymology: "サプライ",
-    example1: "Trees supply clean air.",
-    jp1: "木はきれいな空気を与えます。"
-  },
-  {
-    word: "imply",
-    correct: "をほのめかす",
-    choices: ["をほのめかす", "を申請する"],
-    etymology: "インプライ",
-    example1: "His words implied doubt.",
-    jp1: "彼の言葉は疑いをほのめかしました。"
-  },
-  {
-    word: "renew",
-    correct: "を更新する",
-    choices: ["を更新する", "を防ぐ"],
-    etymology: "リニュー",
-    example1: "Please renew your pass.",
-    jp1: "パスを更新してください。"
-  },
-  {
-    word: "reward",
-    correct: "に報いる",
-    choices: ["に報いる", "を描く"],
-    etymology: "リワード",
-    example1: "Hard work rewards us.",
-    jp1: "努力は私たちに報いを与えます。"
-  },
-  {
-    word: "estimate",
-    correct: "を見積もる",
-    choices: ["を見積もる", "を脅す"],
-    etymology: "エスティメイト",
-    example1: "We estimated the time.",
-    jp1: "私たちは時間を見積もりました。"
-  },
-  {
-    word: "survive",
-    correct: "生き残る",
-    choices: ["生き残る", "を囲む"],
-    etymology: "サバイブ",
-    example1: "Few plants survive here.",
-    jp1: "ここでは生き残る植物は少ないです。"
-  },
-  {
-    word: "transport",
-    correct: "を輸送する",
-    choices: ["を輸送する", "を励ます"],
-    etymology: "トランスポート",
-    example1: "Trucks transport food.",
-    jp1: "トラックは食べ物を運びます。"
-  },
-  {
-    word: "amuse",
-    correct: "を楽しませる",
-    choices: ["を楽しませる", "を移す"],
-    etymology: "アミューズ",
-    example1: "The clown amused the children.",
-    jp1: "その道化師は子どもたちを楽しませました。"
-  },
-  {
-    word: "consist",
-    correct: "成り立っている",
-    choices: ["成り立っている", "を記憶する"],
-    etymology: "コンシスト",
-    example1: "The team consists of five people.",
-    jp1: "そのチームは5人で成り立っています。"
-  },
-  {
-    word: "direct",
-    correct: "を指揮する",
-    choices: ["を指揮する", "を修復する"],
-    etymology: "ダイレクト",
-    example1: "She directed the play.",
-    jp1: "彼女はその劇を監督しました。"
-  },
-  {
-    word: "compose",
-    correct: "を創作する",
-    choices: ["を創作する", "を延期する"],
-    etymology: "コンポーズ",
-    example1: "He composed a song.",
-    jp1: "彼は歌を作りました。"
-  },
-  {
-    word: "manage",
-    correct: "を管理する",
-    choices: ["を管理する", "を達成する"],
-    etymology: "マネージ",
-    example1: "She managed the team.",
-    jp1: "彼女はチームを管理しました。"
-  },
-  {
-    word: "guarantee",
-    correct: "を保証する",
-    choices: ["を保証する", "を救助する"],
-    etymology: "ギャランティー",
-    example1: "We guarantee good service.",
-    jp1: "私たちはよいサービスを保証します。"
-  },
-  {
-    word: "deny",
-    correct: "を否定する",
-    choices: ["を否定する", "を投資する"],
-    etymology: "ディナイ",
-    example1: "He denied the claim.",
-    jp1: "彼はその主張を否定しました。"
-  },
-  {
-    word: "disturb",
-    correct: "の邪魔をする",
-    choices: ["の邪魔をする", "を代表する"],
-    etymology: "ディスターブ",
-    example1: "Please do not disturb me.",
-    jp1: "邪魔しないでください。"
-  },
-  {
-    word: "criticize",
-    correct: "を批判する",
-    choices: ["を批判する", "を与える"],
-    etymology: "クリティサイズ",
-    example1: "Do not criticize him.",
-    jp1: "彼を批判しないでください。"
-  },
-  {
-    word: "protest",
-    correct: "抗議する",
-    choices: ["抗議する", "を寄付する"],
-    etymology: "プロテスト",
-    example1: "Workers protested outside.",
-    jp1: "労働者たちは外で抗議しました。"
-  },
-  {
-    word: "sacrifice",
-    correct: "を犠牲にする",
-    choices: ["を犠牲にする", "を拡大する"],
-    etymology: "サクリファイス",
-    example1: "Parents sacrifice a lot.",
-    jp1: "親は多くを犠牲にします。"
-  },
-  {
-    word: "apologize",
-    correct: "謝る",
-    choices: ["謝る", "を分類する"],
-    etymology: "アポロジャイズ",
-    example1: "I apologize for that.",
-    jp1: "そのことを謝ります。"
-  }
+  {"word": "arrange", "correct": "を手配する", "choices": ["を手配する", "に助言する"], "etymology": "アレンジ（/ɝˈeɪndʒ/）", "example1": "We arranged the chairs in a circle.", "jp1": "私たちはいすを円形に並べた。"},
+  {"word": "observe", "correct": "を観察する", "choices": ["を観察する", "を変える"], "etymology": "オブザーブ（/ʌbzˈɝv/）", "example1": "We observed the stars at night.", "jp1": "私たちは夜に星を観察した。"},
+  {"word": "impose", "correct": "を課す", "choices": ["を課す", "を更新する"], "etymology": "インポーズ（/ˌɪmpˈoʊz/）", "example1": "The government imposed a new tax.", "jp1": "政府は新しい税を課した。"},
+  {"word": "restore", "correct": "を回復させる", "choices": ["を回復させる", "にやる気を起こさせる"], "etymology": "リストア（/rɪstˈɔr/）", "example1": "They restored the old temple.", "jp1": "彼らはその古い寺を修復した。"},
+  {"word": "reject", "correct": "を拒否する", "choices": ["を拒否する", "を改革する"], "etymology": "リジェクト（/rɪdʒˈekt/）", "example1": "The company rejected his proposal.", "jp1": "その会社は彼の提案を拒否した。"},
+  {"word": "overcome", "correct": "を克服する", "choices": ["を克服する", "を結びつける"], "etymology": "オーバーカム（/ˌoʊvɚˈkʌm/）", "example1": "She overcame many difficulties.", "jp1": "彼女は多くの困難を克服した。"},
+  {"word": "react", "correct": "反応する", "choices": ["反応する", "を承認する"], "etymology": "リアクト（/riˈækt/）", "example1": "He reacted calmly to the news.", "jp1": "彼はその知らせに冷静に反応した。"},
+  {"word": "maintain", "correct": "を維持する", "choices": ["を維持する", "を脅かす"], "etymology": "メインテイン（/meɪntˈeɪn/）", "example1": "It is hard to maintain a healthy lifestyle.", "jp1": "健康的な生活を維持するのは難しい。"},
+  {"word": "predict", "correct": "を予測する", "choices": ["を予測する", "減少する"], "etymology": "プリディクト（/prɪdˈɪkt/）", "example1": "Nobody can predict the future exactly.", "jp1": "未来を正確に予測できる人はいない。"},
+  {"word": "operate", "correct": "を操作する", "choices": ["を操作する", "を強化する"], "etymology": "オペレイト（/ˈɑpɝˌeɪt/）", "example1": "He operates the machine safely.", "jp1": "彼はその機械を安全に操作する。"},
+  {"word": "communicate", "correct": "意思疎通する", "choices": ["意思疎通する", "を批判する"], "etymology": "コミュニケイト（/kʌmjˈunʌkˌeɪt/）", "example1": "We need to communicate more clearly.", "jp1": "私たちはもっとはっきり意思疎通する必要がある。"},
+  {"word": "inform", "correct": "に知らせる", "choices": ["に知らせる", "に同行する"], "etymology": "インフォーム（/ˌɪnfˈɔrm/）", "example1": "Please inform me of any changes.", "jp1": "何か変化があれば私に知らせてください。"},
+  {"word": "praise", "correct": "をほめる", "choices": ["をほめる", "を探検する"], "etymology": "プレイズ（/prˈeɪz/）", "example1": "The teacher praised her effort.", "jp1": "先生は彼女の努力をほめた。"},
+  {"word": "stock", "correct": "を蓄える", "choices": ["を蓄える", "を追求する"], "etymology": "ストック（/stˈɑk/）", "example1": "The store stocks fresh vegetables.", "jp1": "その店は新鮮な野菜を置いている。"},
+  {"word": "involve", "correct": "を伴う", "choices": ["を伴う", "を失望させる"], "etymology": "インボルブ（/ˌɪnvˈɑlv/）", "example1": "This job involves working with children.", "jp1": "この仕事は子どもと働くことを含んでいる。"},
+  {"word": "attach", "correct": "を取り付ける", "choices": ["を取り付ける", "を説得する"], "etymology": "アタッチ（/ʌtˈætʃ/）", "example1": "Please attach the file to your email.", "jp1": "そのファイルをメールに添付してください。"},
+  {"word": "extend", "correct": "を広げる", "choices": ["を広げる", "頼る"], "etymology": "エクステンド（/ɪkstˈend/）", "example1": "They extended the deadline by two days.", "jp1": "彼らは締め切りを2日延ばした。"},
+  {"word": "delight", "correct": "を喜ばせる", "choices": ["を喜ばせる", "引き出す"], "etymology": "ディライト（/dɪlˈaɪt/）", "example1": "The news delighted everyone.", "jp1": "その知らせはみんなを喜ばせた。"},
+  {"word": "illustrate", "correct": "を説明する", "choices": ["を説明する", "を頼む"], "etymology": "イラストレイト（/ˈɪlʌstrˌeɪt/）", "example1": "This example illustrates the main point.", "jp1": "この例は要点を説明している。"},
+  {"word": "imply", "correct": "をほのめかす", "choices": ["をほのめかす", "を分ける"], "etymology": "インプライ（/ˌɪmplˈaɪ/）", "example1": "His silence implied agreement.", "jp1": "彼の沈黙は同意を暗示していた。"},
+  {"word": "consume", "correct": "を消費する", "choices": ["を消費する", "を消化する"], "etymology": "コンサーム（/kʌnsˈum/）", "example1": "Cars consume a lot of energy.", "jp1": "車は多くのエネルギーを消費する。"},
+  {"word": "upset", "correct": "を動揺させる", "choices": ["を動揺させる", "を驚かせる"], "etymology": "アップセット（/ʌpsˈet/）", "example1": "The news upset my mother.", "jp1": "その知らせは母を動揺させた。"},
+  {"word": "advertise", "correct": "を宣伝する", "choices": ["を宣伝する", "を称賛する"], "etymology": "アドバタイズ（/ˈædvɝtˌaɪz/）", "example1": "The company advertised its new product online.", "jp1": "その会社は新製品をオンラインで宣伝した。"},
+  {"word": "rebuild", "correct": "を再建する", "choices": ["を再建する", "を認める"], "etymology": "リビルド（/ˌriˈbɪld/）", "example1": "They rebuilt the bridge after the flood.", "jp1": "彼らは洪水のあとでその橋を再建した。"},
+  {"word": "apologize", "correct": "謝る", "choices": ["謝る", "を延期する"], "etymology": "アポロジャイズ（/ʌpˈɑlʌdʒˌaɪz/）", "example1": "You should apologize for your mistake.", "jp1": "あなたは自分のミスを謝るべきだ。"},
+  {"word": "evolve", "correct": "進化する", "choices": ["進化する", "を結び付ける"], "etymology": "イボルブ（/ɪvˈɑlv/）", "example1": "Languages evolve over time.", "jp1": "言語は時とともに進化する。"},
+  {"word": "disturb", "correct": "を妨げる", "choices": ["を妨げる", "を分ける"], "etymology": "ディスターブ（/dɪstˈɝb/）", "example1": "Please do not disturb the patients.", "jp1": "患者のじゃまをしないでください。"},
+  {"word": "marry", "correct": "と結婚する", "choices": ["と結婚する", "を計算する"], "etymology": "メアリー（/mˈeri/）", "example1": "She married her college classmate.", "jp1": "彼女は大学時代の同級生と結婚した。"},
+  {"word": "adapt", "correct": "適応する", "choices": ["適応する", "を混乱させる"], "etymology": "アダプト（/ʌdˈæpt/）", "example1": "Animals adapt to their environment.", "jp1": "動物は自分の環境に適応する。"},
+  {"word": "organize", "correct": "を組織する", "choices": ["を組織する", "を分配する"], "etymology": "オーガナイズ（/ˈɔrɡʌnˌaɪz/）", "example1": "They organized a clean-up event.", "jp1": "彼らは清掃イベントを企画した。"},
+  {"word": "confess", "correct": "を告白する", "choices": ["を告白する", "を強調する"], "etymology": "コンフェス（/kʌnfˈes/）", "example1": "He confessed the truth at last.", "jp1": "彼はついに真実を告白した。"},
+  {"word": "identify", "correct": "を特定する", "choices": ["を特定する", "存在する"], "etymology": "アイデンティファイ（/aɪdˈentʌfˌaɪ/）", "example1": "Can you identify the person in this photo?", "jp1": "この写真の人物を特定できますか。"},
+  {"word": "defeat", "correct": "を打ち負かす", "choices": ["を打ち負かす", "を調整する"], "etymology": "ディフィート（/dɪfˈit/）", "example1": "Our team defeated the champions.", "jp1": "私たちのチームは王者を打ち負かした。"},
+  {"word": "repeat", "correct": "を繰り返す", "choices": ["を繰り返す", "を設立する"], "etymology": "リピート（/rɪpˈit/）", "example1": "Could you repeat that question?", "jp1": "その質問をもう一度言ってもらえますか。"},
+  {"word": "define", "correct": "を定義する", "choices": ["を定義する", "退職する"], "etymology": "ディファイン（/dɪfˈaɪn/）", "example1": "It is difficult to define happiness.", "jp1": "幸福を定義するのは難しい。"},
+  {"word": "afford", "correct": "を買う余裕がある", "choices": ["を買う余裕がある", "を占める"], "etymology": "アフォード（/ʌfˈɔrd/）", "example1": "I cannot afford a new car.", "jp1": "私は新しい車を買う余裕がない。"},
+  {"word": "demonstrate", "correct": "を実証する", "choices": ["を実証する", "を思い出す"], "etymology": "デモンストレイト（/dˈemʌnstrˌeɪt/）", "example1": "The experiment demonstrated the theory.", "jp1": "その実験はその理論を実証した。"},
+  {"word": "advise", "correct": "に助言する", "choices": ["に助言する", "を禁じる"], "etymology": "アドバイズ（/ædvˈaɪz/）", "example1": "I advise you to save more money.", "jp1": "もっとお金を貯めるように助言します。"},
+  {"word": "alter", "correct": "を変える", "choices": ["を変える", "貢献する"], "etymology": "オールター（/ˈɔltɝ/）", "example1": "We had to alter the plan.", "jp1": "私たちはその計画を変更しなければならなかった。"},
+  {"word": "renew", "correct": "を更新する", "choices": ["を更新する", "を感謝する"], "etymology": "リニュー（/rɪnˈu/）", "example1": "I need to renew my driver's license.", "jp1": "私は運転免許証を更新する必要がある。"},
+  {"word": "motivate", "correct": "にやる気を起こさせる", "choices": ["にやる気を起こさせる", "に埋め合わせをする"], "etymology": "モウティベイト（/mˈoʊtʌvˌeɪt/）", "example1": "Good teachers motivate students to learn.", "jp1": "よい教師は生徒に学ぶ意欲を起こさせる。"},
+  {"word": "reform", "correct": "を改革する", "choices": ["を改革する", "を無視する"], "etymology": "リフォーム（/rʌfˈɔrm/）", "example1": "The country reformed its education system.", "jp1": "その国は教育制度を改革した。"},
+  {"word": "combine", "correct": "を結びつける", "choices": ["を結びつける", "現れる"], "etymology": "コンバイン（/kˈɑmbaɪn/）", "example1": "We combined the two lists into one.", "jp1": "私たちは2つのリストを1つにまとめた。"},
+  {"word": "approve", "correct": "を承認する", "choices": ["を承認する", "に反対する"], "etymology": "アプルーブ（/ʌprˈuv/）", "example1": "The board approved the budget.", "jp1": "役員会はその予算を承認した。"},
+  {"word": "threaten", "correct": "を脅かす", "choices": ["を脅かす", "を調査する"], "etymology": "スレットゥン（/θrˈetʌn/）", "example1": "Dark clouds threatened rain.", "jp1": "黒い雲が雨を予感させた。"},
+  {"word": "decrease", "correct": "減少する", "choices": ["減少する", "を吸収する"], "etymology": "ディクリース（/dɪkrˈis/）", "example1": "The number of visitors decreased this year.", "jp1": "今年は来訪者数が減少した。"},
+  {"word": "strengthen", "correct": "を強化する", "choices": ["を強化する", "奮闘する"], "etymology": "ストレングン（/strˈeŋθʌn/）", "example1": "Regular exercise strengthens your muscles.", "jp1": "定期的な運動は筋肉を強くする。"},
+  {"word": "criticize", "correct": "を批判する", "choices": ["を批判する", "を提案する"], "etymology": "クリティサイズ（/krˈɪtɪsˌaɪz/）", "example1": "It is easy to criticize others.", "jp1": "他人を批判するのは簡単だ。"},
+  {"word": "accompany", "correct": "に同行する", "choices": ["に同行する", "減少する"], "etymology": "アカンパニー（/ʌkˈʌmpʌni/）", "example1": "Children must be accompanied by an adult.", "jp1": "子どもには大人の付き添いが必要だ。"},
+  {"word": "explore", "correct": "を探検する", "choices": ["を探検する", "を否定する"], "etymology": "エクスプロア（/ɪksplˈɔr/）", "example1": "They explored the island on foot.", "jp1": "彼らは歩いてその島を探検した。"},
+  {"word": "pursue", "correct": "を追求する", "choices": ["を追求する", "回復する"], "etymology": "パースー（/pɝsˈu/）", "example1": "She wants to pursue a career in science.", "jp1": "彼女は科学分野での職業を追求したいと思っている。"},
+  {"word": "disappoint", "correct": "を失望させる", "choices": ["を失望させる", "を我慢する"], "etymology": "ディサポイント（/dˌɪsʌpˈɔɪnt/）", "example1": "The result disappointed many fans.", "jp1": "その結果は多くのファンを失望させた。"},
+  {"word": "persuade", "correct": "を説得する", "choices": ["を説得する", "強く主張する"], "etymology": "パースウェイド（/pɝswˈeɪd/）", "example1": "He persuaded me to join the club.", "jp1": "彼は私を説得してそのクラブに入らせた。"},
+  {"word": "depend", "correct": "頼る", "choices": ["頼る", "を成し遂げる"], "etymology": "ディペンド（/dɪpˈend/）", "example1": "Success depends on effort.", "jp1": "成功は努力にかかっている。"},
+  {"word": "withdraw", "correct": "引き出す", "choices": ["引き出す", "を後悔する"], "etymology": "ウィズドロー（/wɪðdrˈɔ/）", "example1": "She withdrew some money from the bank.", "jp1": "彼女は銀行からお金を引き出した。"},
+  {"word": "request", "correct": "を頼む", "choices": ["を頼む", "を発見する"], "etymology": "リクエスト（/rɪkwˈest/）", "example1": "They requested more time.", "jp1": "彼らはもっと時間がほしいと頼んだ。"},
+  {"word": "divide", "correct": "を分ける", "choices": ["を分ける", "を果たす"], "etymology": "ディバイド（/dɪvˈaɪd/）", "example1": "The teacher divided the class into groups.", "jp1": "先生はクラスをいくつかの班に分けた。"},
+  {"word": "digest", "correct": "を消化する", "choices": ["を消化する", "を保存する"], "etymology": "ダイジェスト（/daɪdʒˈest/）", "example1": "It takes time to digest new information.", "jp1": "新しい情報を消化するには時間がかかる。"},
+  {"word": "astonish", "correct": "を驚かせる", "choices": ["を驚かせる", "を決定する"], "etymology": "アストニッシュ（/ʌstˈɑnɪʃ/）", "example1": "The magic trick astonished the children.", "jp1": "その手品は子どもたちを驚かせた。"},
+  {"word": "admire", "correct": "を称賛する", "choices": ["を称賛する", "を寄付する"], "etymology": "アドマイア（/ædmˈaɪr/）", "example1": "I admire her honesty.", "jp1": "私は彼女の誠実さを尊敬している。"},
+  {"word": "admit", "correct": "を認める", "choices": ["を認める", "を達成する"], "etymology": "アドミット（/ʌdmˈɪt/）", "example1": "He admitted his mistake.", "jp1": "彼は自分のミスを認めた。"},
+  {"word": "postpone", "correct": "を延期する", "choices": ["を延期する", "を変える"], "etymology": "ポストポーン（/poʊstpˈoʊn/）", "example1": "They postponed the game because of rain.", "jp1": "彼らは雨のため試合を延期した。"},
+  {"word": "associate", "correct": "を結び付ける", "choices": ["を結び付ける", "を満たす"], "etymology": "アソシエイト（/ʌsˈoʊsiʌt/）", "example1": "Many people associate Paris with art.", "jp1": "多くの人はパリと芸術を結び付ける。"},
+  {"word": "separate", "correct": "を分ける", "choices": ["を分ける", "移動する"], "etymology": "セパレイト（/sˈepɝˌeɪt/）", "example1": "We separated the trash into three bins.", "jp1": "私たちはごみを3つに分別した。"},
+  {"word": "calculate", "correct": "を計算する", "choices": ["を計算する", "に抵抗する"], "etymology": "カルキュレイト（/kˈælkjʌlˌeɪt/）", "example1": "We need to calculate the total cost.", "jp1": "私たちは合計費用を計算する必要がある。"},
+  {"word": "confuse", "correct": "を混乱させる", "choices": ["を混乱させる", "に値する"], "etymology": "コンフューズ（/kʌnfjˈuz/）", "example1": "The two words often confuse learners.", "jp1": "その2語は学習者をよく混乱させる。"},
+  {"word": "distribute", "correct": "を分配する", "choices": ["を分配する", "と結論づける"], "etymology": "ディストリビュート（/dɪstrˈɪbjut/）", "example1": "They distributed food to the victims.", "jp1": "彼らは被災者に食料を配った。"},
+  {"word": "emphasize", "correct": "を強調する", "choices": ["を強調する", "を選ぶ"], "etymology": "エンファサイズ（/ˈemfʌsˌaɪz/）", "example1": "The teacher emphasized the importance of practice.", "jp1": "先生は練習の大切さを強調した。"},
+  {"word": "exist", "correct": "存在する", "choices": ["存在する", "を分析する"], "etymology": "イグジスト（/ɪɡzˈɪst/）", "example1": "Do ghosts really exist?", "jp1": "幽霊は本当に存在するのだろうか。"},
+  {"word": "adjust", "correct": "を調整する", "choices": ["を調整する", "成功する"], "etymology": "アジャスト（/ʌdʒˈʌst/）", "example1": "You can adjust the height of the chair.", "jp1": "その椅子の高さは調整できる。"},
+  {"word": "childhood", "correct": "子ども時代", "choices": ["子ども時代", "喜び"], "etymology": "チャイルドフッド（/tʃˈaɪldhˌʊd/）", "example1": "My childhood was full of happy memories.", "jp1": "私の子ども時代は楽しい思い出でいっぱいだった。"},
+  {"word": "definition", "correct": "定義", "choices": ["定義", "連盟"], "etymology": "デフィニション（/dˌefʌnˈɪʃʌn/）", "example1": "Can you give me a simple definition of this word?", "jp1": "この単語の簡単な定義を教えてくれますか。"},
+  {"word": "dispute", "correct": "論争", "choices": ["論争", "意図"], "etymology": "ディスピュート（/dɪspjˈut/）", "example1": "The dispute lasted for several years.", "jp1": "その論争は数年間続いた。"},
+  {"word": "representation", "correct": "表現", "choices": ["表現", "10年間"], "etymology": "レプリゼンテーション（/rˌeprʌzentˈeɪʃʌn/）", "example1": "The painting is a representation of nature.", "jp1": "その絵は自然を表現したものだ。"},
+  {"word": "option", "correct": "選択肢", "choices": ["選択肢", "刑務所"], "etymology": "オプション（/ˈɑpʃʌn/）", "example1": "Online study is a good option for busy people.", "jp1": "オンライン学習は忙しい人にとってよい選択肢だ。"},
+  {"word": "majority", "correct": "大多数", "choices": ["大多数", "連続"], "etymology": "マジョリティ（/mʌdʒˈɔrʌti/）", "example1": "The majority supported the plan.", "jp1": "大多数がその計画を支持した。"},
+  {"word": "weight", "correct": "重さ", "choices": ["重さ", "主導権"], "etymology": "ウェイト（/wˈeɪt/）", "example1": "The box is light in weight.", "jp1": "その箱は重さの点では軽い。"},
+  {"word": "workplace", "correct": "職場", "choices": ["職場", "反応"], "etymology": "ワークプレイス（/ˈwɝkˌpleɪs/）", "example1": "Safety is important in every workplace.", "jp1": "安全はどの職場でも重要だ。"},
+  {"word": "variation", "correct": "変化", "choices": ["変化", "特徴"], "etymology": "バリエーション（/vˌeriˈeɪʃʌn/）", "example1": "There is a lot of variation in climate across the country.", "jp1": "その国では地域によって気候に大きな違いがある。"},
+  {"word": "minority", "correct": "少数派", "choices": ["少数派", "多様性"], "etymology": "マイノリティ（/maɪnˈɔrʌti/）", "example1": "The proposal was supported by only a small minority.", "jp1": "その提案を支持したのは少数派だけだった。"}
 ];
