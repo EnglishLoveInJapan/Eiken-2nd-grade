@@ -79,3 +79,4 @@ window.quizData = [
   {"word": "survive", "correct": "生き残る", "choices": ["生き残る", "を定義する"], "etymology": "サバイブ（/sɝvˈaɪv/）", "example1": "Few plants can survive in this heat.", "jp1": "この暑さの中で生き残れる植物は少ない。"},
   {"word": "qualify", "correct": "資格を得る", "choices": ["資格を得る", "を買う余裕がある"], "etymology": "クオリファイ（/kwˈɑlʌfˌaɪ/）", "example1": "She qualified for the final round.", "jp1": "彼女は決勝戦への出場資格を得た。"},
   {"word": "deliver", "correct": "を届ける", "choices": ["を届ける", "を実証する"], "etymology": "ディリバー（/dɪlˈɪvɝ/）", "example1": "They delivered the package this morning.", "jp1": "彼らは今朝その荷物を配達した。"}
+];
