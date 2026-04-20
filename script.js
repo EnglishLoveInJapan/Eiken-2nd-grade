@@ -3,13 +3,13 @@
 // ==============================
 
 // 不正解後に自動で次へ進むまでの時間（ミリ秒）
-const AUTO_NEXT_MS = 2000;
+const AUTO_NEXT_MS = 2500;
 
 // 音声読み上げの言語設定
-const SPEAK_LANG = "en-US";
+const SPEAK_LANG = "en-UK";
 
 // カウントダウン開始数
-const TIMER_START = 10;
+const TIMER_START = 5;
 
 // カウントダウンの1ステップの長さ（ミリ秒）
 const TIMER_STEP_MS = 1000;
@@ -434,7 +434,7 @@ if (resetNowBtnEl) {
     // 正解と語源を表示
     explanationEl.innerHTML = `
       <div class="answer-line">${escapeHtml(currentQuestion.word)} = ${escapeHtml(currentQuestion.correct)}</div>
-      <div class="etymology-line">語源: ${escapeHtml(currentQuestion.etymology)}</div>
+      <div class="etymology-line"> ${escapeHtml(currentQuestion.etymology)}</div>
     `;
     explanationEl.classList.remove("hidden");
 
@@ -468,7 +468,7 @@ if (resetNowBtnEl) {
 
       explanationEl.innerHTML = `
         <div class="answer-line">${escapeHtml(currentQuestion.word)} = ${escapeHtml(currentQuestion.correct)}</div>
-        <div class="etymology-line">語源: ${escapeHtml(currentQuestion.etymology)}</div>
+        <div class="etymology-line"> ${escapeHtml(currentQuestion.etymology)}</div>
       `;
       explanationEl.classList.remove("hidden");
 
@@ -499,16 +499,16 @@ if (resetNowBtnEl) {
     // 正解・語源・例文1文表示
     explanationEl.innerHTML = `
       <div class="answer-line">${escapeHtml(currentQuestion.word)} = ${escapeHtml(currentQuestion.correct)}</div>
-      <div class="etymology-line">語源: ${escapeHtml(currentQuestion.etymology)}</div>
+      <div class="etymology-line"> ${escapeHtml(currentQuestion.etymology)}</div>
       <div class="example-block">
-        ${escapeHtml(currentQuestion.example1)}<br>
+        ${escapeHtml(currentQuestion.example1)}
         ${escapeHtml(currentQuestion.jp1)}
       </div>
     `;
     explanationEl.classList.remove("hidden");
 
     // 少しだけ見せて次へ
-    scheduleNext(1000);
+    scheduleNext(1500);
   }
 
 
@@ -563,7 +563,7 @@ if (resetNowBtnEl) {
               <th style="width: 70px;">印</th>
               <th>単語</th>
               <th>意味</th>
-              <th>語源</th>
+              <th>読み方</th>
             </tr>
           </thead>
           <tbody>
