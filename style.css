@@ -13,7 +13,7 @@ body {
 
 .message-wrong {
   background: #ffe5e5;
-  color: #b00020;
+  color: red;
 }
 
 .container {
