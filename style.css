@@ -82,8 +82,8 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 12px;
-  margin-bottom: 16px;
+  gap: 6px;
+  margin-bottom: 10px;
 }
 
 .top-controls {
@@ -172,7 +172,7 @@ body {
 }
 
 .word {
-  font-size: 42px;
+  font-size: 50px;
   font-weight: 900;
   text-align: center;
   margin-bottom: 28px;
