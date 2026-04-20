@@ -464,7 +464,7 @@ if (resetNowBtnEl) {
       messageEl.classList.remove("message-correct");
       messageEl.classList.add("message-wrong");
       inlineNextBtnEl.classList.remove("hidden");
-      messageTextEl.textContent = "Try again !";
+      messageTextEl.textContent = "◾️◽️◾️◽️◾️Try again !◾️◽️◾️◽️◾️";
 
       explanationEl.innerHTML = `
         <div class="answer-line">${escapeHtml(currentQuestion.word)} = ${escapeHtml(currentQuestion.correct)}</div>
