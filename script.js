@@ -3,7 +3,7 @@
 // ==============================
 
 // 不正解後に自動で次へ進むまでの時間（ミリ秒）
-const AUTO_NEXT_MS = 2500;
+const AUTO_NEXT_MS = 3500;
 
 // 音声読み上げの言語設定
 const SPEAK_LANG = "en-UK";
@@ -469,6 +469,10 @@ if (resetNowBtnEl) {
       explanationEl.innerHTML = `
         <div class="answer-line">${escapeHtml(currentQuestion.word)} = ${escapeHtml(currentQuestion.correct)}</div>
         <div class="etymology-line"> ${escapeHtml(currentQuestion.etymology)}</div>
+           <div class="example-block">
+        ${escapeHtml(currentQuestion.example1)}
+        ${escapeHtml(currentQuestion.jp1)}
+      </div>
       `;
       explanationEl.classList.remove("hidden");
 
