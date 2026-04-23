@@ -503,16 +503,11 @@ if (resetNowBtnEl) {
     // 正解・語源・例文1文表示
     explanationEl.innerHTML = `
       <div class="answer-line">${escapeHtml(currentQuestion.word)} = ${escapeHtml(currentQuestion.correct)}</div>
-      <div class="etymology-line"> ${escapeHtml(currentQuestion.etymology)}</div>
-      <div class="example-block">
-        ${escapeHtml(currentQuestion.example1)}
-        ${escapeHtml(currentQuestion.jp1)}
-      </div>
     `;
     explanationEl.classList.remove("hidden");
 
     // 少しだけ見せて次へ
-    scheduleNext(500);
+    scheduleNext(400);
   }
 
 
