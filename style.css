@@ -182,12 +182,12 @@ body {
 .choices {
   display: flex;
   flex-direction: column;
-  gap: 2px;
+  gap: 20px;
 }
 
 .choices button {
   width: 100%;
-  font-size: 22px;
+  font-size: 30px;
   font-weight: 700;
   padding: 8px;
   border: 2px solid #d0d0d0;
