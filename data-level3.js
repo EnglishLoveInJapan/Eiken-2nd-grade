@@ -20,7 +20,6 @@ window.quizData = [
   {"word": "violence", "correct": "暴力", "choices": ["暴力", "電話"], "etymology": "バイオレンス（vˈaɪʌlʌns）", "example1": "The movie contains some violence.", "jp1": "その映画にはいくらか暴力的な場面が含まれている。"},
   {"word": "channel", "correct": "経路", "choices": ["経路", "犠牲"], "etymology": "チャンネル（tʃˈænʌl）", "example1": "We changed the TV channel.", "jp1": "私たちはテレビのチャンネルを変えた。"},
   {"word": "ministry", "correct": "省庁", "choices": ["省庁", "干渉"], "etymology": "ミニストリー（mˈɪnʌstri）", "example1": "The ministry announced a new policy.", "jp1": "その省は新しい方針を発表した。"},
-  {"word": "network", "correct": "ネットワーク", "choices": ["ネットワーク", "下位"], "etymology": "ネットワーク（nˈetwˌɝk）", "example1": "The computer is connected to the network.", "jp1": "そのコンピューターはネットワークにつながっている。"},
   {"word": "professor", "correct": "教授", "choices": ["教授", "危機"], "etymology": "プロフェッサー（prʌfˈesɝ）", "example1": "The professor gave a clear lecture.", "jp1": "その教授はわかりやすい講義をした。"},
   {"word": "advantage", "correct": "利点", "choices": ["利点", "一節"], "etymology": "アドバンテージ（ædvˈæntɪdʒ）", "example1": "One advantage of this system is speed.", "jp1": "この制度の利点の1つは速さだ。"},
   {"word": "agriculture", "correct": "農業", "choices": ["農業", "犯罪"], "etymology": "アグリカルチャー（ˈæɡrɪkˌʌltʃɝ）", "example1": "Agriculture is important in this region.", "jp1": "この地域では農業が重要だ。"},
@@ -45,7 +44,6 @@ window.quizData = [
   {"word": "vision", "correct": "展望", "choices": ["展望", "失業"], "etymology": "ビジョン（vˈɪʒʌn）", "example1": "The company has a clear vision for the future.", "jp1": "その会社は将来について明確な展望を持っている。"},
   {"word": "republic", "correct": "共和国", "choices": ["共和国", "実験"], "etymology": "リパブリック（ripˈʌblʌk）", "example1": "France is a republic.", "jp1": "フランスは共和国だ。"},
   {"word": "document", "correct": "文書", "choices": ["文書", "改善"], "etymology": "ドキュメント（dˈɑkjʌment）", "example1": "Please read the document carefully.", "jp1": "その文書を注意深く読んでください。"},
-  {"word": "county", "correct": "郡", "choices": ["郡", "ひも"], "etymology": "カウンティ（kˈaʊnti）", "example1": "He lives in a rural county.", "jp1": "彼は田舎の郡に住んでいる。"},
   {"word": "quarter", "correct": "4分の1", "choices": ["4分の1", "委員会"], "etymology": "クォーター（kwˈɔrtɝ）", "example1": "A quarter of the students were absent.", "jp1": "その学生の4分の1が欠席した。"},
   {"word": "solicitor", "correct": "事務弁護士", "choices": ["事務弁護士", "考慮"], "etymology": "ソリシター（sʌlˈɪsʌtɝ）", "example1": "She spoke with her solicitor.", "jp1": "彼女は事務弁護士に相談した。"},
   {"word": "legislation", "correct": "法律", "choices": ["法律", "ソフトウェア"], "etymology": "レジスレーション（lˌedʒʌslˈeɪʃʌn）", "example1": "New legislation was introduced last year.", "jp1": "新しい法律が昨年導入された。"},
@@ -53,7 +51,6 @@ window.quizData = [
   {"word": "version", "correct": "版", "choices": ["版", "問い合わせ"], "etymology": "バージョン（vˈɝʒʌn）", "example1": "This is the latest version of the app.", "jp1": "これはそのアプリの最新バージョンだ。"},
   {"word": "failure", "correct": "失敗", "choices": ["失敗", "収益"], "etymology": "フェイリャー（fˈeɪljɝ）", "example1": "The plan ended in failure.", "jp1": "その計画は失敗に終わった。"},
   {"word": "servant", "correct": "使用人", "choices": ["使用人", "文学"], "etymology": "サーバント（sˈɝvʌnt）", "example1": "The story is about a young servant.", "jp1": "その物語は若い使用人についてのものだ。"},
-  {"word": "holder", "correct": "保有者", "choices": ["保有者", "結婚"], "etymology": "ホルダー（hˈoʊldɝ）", "example1": "Ticket holders may enter first.", "jp1": "チケットの所持者は先に入場できる。"},
   {"word": "category", "correct": "部類", "choices": ["部類", "外見"], "etymology": "カテゴリー（kˈætʌɡˌɔri）", "example1": "This book belongs in a different category.", "jp1": "この本は別の分類に入る。"},
   {"word": "neighbour", "correct": "近所の人", "choices": ["近所の人", "場合"], "etymology": "ネイバー（nˈeɪbɝ）", "example1": "Our neighbour is very kind.", "jp1": "私たちの近所の人はとても親切だ。"},
   {"word": "breath", "correct": "息", "choices": ["息", "要因"], "etymology": "ブレス（brˈeθ）", "example1": "Take a deep breath and relax.", "jp1": "深呼吸して落ち着きなさい。"},
@@ -75,5 +72,4 @@ window.quizData = [
   {"word": "recognition", "correct": "認識", "choices": ["認識", "対立"], "etymology": "レコグニション（rˌekʌɡnˈɪʃʌn）", "example1": "She finally got the recognition she deserved.", "jp1": "彼女はついにそれに値する評価を得た。"},
   {"word": "injury", "correct": "けが", "choices": ["けが", "歴史家"], "etymology": "インジャリー（ˈɪndʒɝi）", "example1": "He could not play because of an injury.", "jp1": "彼はけがのためプレーできなかった。"},
   {"word": "justice", "correct": "正義", "choices": ["正義", "文"], "etymology": "ジャスティス（dʒˈʌstʌs）", "example1": "They are fighting for justice.", "jp1": "彼らは正義のために戦っている。"},
-  {"word": "component", "correct": "構成要素", "choices": ["構成要素", "スタジオ"], "etymology": "コンポーネント（kʌmpˈoʊnʌnt）", "example1": "This machine has many small components.", "jp1": "その機械には多くの小さな部品がある。"}
 ];
