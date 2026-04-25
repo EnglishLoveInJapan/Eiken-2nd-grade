@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>語源クイズ Lite</title>
+  <link rel="stylesheet" href="style.css?v=70">
+</head>
+<body>
+  <main class="container">
+    <div class="top-bar">
+      <div class="top-mini-buttons">
+        <button type="button" class="mini-top-button" id="finishNowBtn">結果を見る</button>
+        <button type="button" class="mini-top-button" onclick="location.href='./index.html'">トップへ戻る</button>
+      </div>
+      <div class="level-label" id="levelLabel">読み込み中...</div>
+    </div>
+
+    <div class="progress" id="progress">読み込み中...</div>
+
+    <div class="word-card">
+      <div class="word" id="word">読み込み中...</div>
+
+      <div class="choices">
+        <button id="choice0" type="button">...</button>
+        <button id="choice1" type="button">...</button>
+      </div>
+
+      <div id="message" class="message hidden">
+        <span id="messageText"></span>
+        <button id="inlineNextBtn" class="inline-next hidden" type="button">次へ</button>
+      </div>
+    </div>
+
+    <div class="explanation hidden" id="explanation"></div>
+  </main>
+
+  <script>
+    (function () {
+      const params = new URLSearchParams(window.location.search);
+      const level = params.get("level") || "1";
+
+      const levelLabelMap = {
+        "1": "Level 1",
+        "2": "Level 2",
+        "3": "Level 3",
+        "4": "Level 4",
+        "5": "Level 5",
+        "6": "Level 6",
+        "7": "Level 7",
+        "8": "Level 8",
+        "9": "Level 9",
+        "10": "Level 10"
+      };
+
+      const STORAGE_KEY = `quiz-lite-mastered-level-${level}`;
+
+      const progressEl = document.getElementById("progress");
+      const wordEl = document.getElementById("word");
+      const choice0El = document.getElementById("choice0");
+      const choice1El = document.getElementById("choice1");
+      const messageEl = document.getElementById("message");
+      const messageTextEl = document.getElementById("messageText");
+      const inlineNextBtnEl = document.getElementById("inlineNextBtn");
+      const explanationEl = document.getElementById("explanation");
+      const levelLabelEl = document.getElementById("levelLabel");
+      const finishNowBtnEl = document.getElementById("finishNowBtn");
+
+      levelLabelEl.textContent = levelLabelMap[level] || `Level ${level}`;
+
+      function escapeHtml(value) {
+        return String(value)
+          .replace(/&/g, "&amp;")
+          .replace(/</g, "&lt;")
+          .replace(/>/g, "&gt;")
+          .replace(/"/g, "&quot;")
+          .replace(/'/g, "&#39;");
+      }
+
+      function shuffleArray(array) {
+        const copied = [...array];
+        for (let i = copied.length - 1; i > 0; i--) {
+          const j = Math.floor(Math.random() * (i + 1));
+          [copied[i], copied[j]] = [copied[j], copied[i]];
+        }
+        return copied;
+      }
+
+      function showLoadError(message) {
+        progressEl.textContent = "読み込み失敗";
+        wordEl.textContent = message;
+        choice0El.classList.add("hidden");
+        choice1El.classList.add("hidden");
+        messageEl.classList.add("hidden");
+        explanationEl.classList.add("hidden");
+      }
+
+      function loadMasteredWords() {
+        try {
+          const raw = localStorage.getItem(STORAGE_KEY);
+          if (!raw) return new Set();
+          const parsed = JSON.parse(raw);
+          if (!Array.isArray(parsed)) return new Set();
+          return new Set(parsed);
+        } catch (error) {
+          return new Set();
+        }
+      }
+
+      function saveMasteredWords(setObj) {
+        try {
+          localStorage.setItem(STORAGE_KEY, JSON.stringify([...setObj]));
+        } catch (error) {
+          // 保存失敗時は無視
+        }
+      }
+
+      const dataScript = document.createElement("script");
+      dataScript.src = `./data-level${encodeURIComponent(level)}.js?v=70`;
+
+      dataScript.onerror = function () {
+        showLoadError(`data-level${level}.js が読めません`);
+      };
+
+      dataScript.onload = function () {
+        if (!Array.isArray(window.quizData) || window.quizData.length === 0) {
+          showLoadError("window.quizData がありません");
+          return;
+        }
+
+        const allQuestions = [...window.quizData];
+        const totalQuestions = allQuestions.length;
+        const masteredWords = loadMasteredWords();
+
+        let questionQueue = shuffleArray(
+          allQuestions.filter(q => !masteredWords.has(q.word))
+        );
+
+        let currentQuestion = null;
+        let currentChoices = [];
+        let correctTimer = null;
+
+        function updateProgress() {
+          progressEl.textContent = `${masteredWords.size} / ${totalQuestions} 問正解済み`;
+        }
+
+        function resetMessage() {
+          messageTextEl.textContent = "";
+          messageEl.classList.add("hidden");
+          inlineNextBtnEl.classList.add("hidden");
+        }
+
+        function clearCorrectTimer() {
+          if (correctTimer !== null) {
+            clearTimeout(correctTimer);
+            correctTimer = null;
+          }
+        }
+
+        function showQuestion() {
+          clearCorrectTimer();
+
+          if (questionQueue.length === 0) {
+            showFinalPage(false);
+            return;
+          }
+
+          currentQuestion = questionQueue.shift();
+          currentChoices = shuffleArray(currentQuestion.choices);
+
+          updateProgress();
+          wordEl.textContent = currentQuestion.word;
+
+          choice0El.textContent = currentChoices[0];
+          choice1El.textContent = currentChoices[1];
+
+          choice0El.disabled = false;
+          choice1El.disabled = false;
+          choice0El.classList.remove("hidden");
+          choice1El.classList.remove("hidden");
+
+          resetMessage();
+          explanationEl.classList.add("hidden");
+          explanationEl.innerHTML = "";
+
+          choice0El.onclick = function () {
+            checkAnswer(currentChoices[0]);
+          };
+          choice1El.onclick = function () {
+            checkAnswer(currentChoices[1]);
+          };
+        }
+
+        function checkAnswer(selected) {
+          choice0El.disabled = true;
+          choice1El.disabled = true;
+
+          if (selected !== currentQuestion.correct) {
+            messageEl.classList.remove("hidden");
+            inlineNextBtnEl.classList.remove("hidden");
+            messageTextEl.textContent = "Try again!";
+            explanationEl.innerHTML = `
+              <div class="answer-line">${escapeHtml(currentQuestion.word)} = ${escapeHtml(currentQuestion.correct)}</div>
+              <div class="etymology-line">語源: ${escapeHtml(currentQuestion.etymology)}</div>
+            `;
+            explanationEl.classList.remove("hidden");
+
+            questionQueue.push(currentQuestion);
+            return;
+          }
+
+          masteredWords.add(currentQuestion.word);
+          saveMasteredWords(masteredWords);
+          updateProgress();
+
+          messageEl.classList.remove("hidden");
+          inlineNextBtnEl.classList.add("hidden");
+          messageTextEl.textContent = "Excellent!";
+
+          explanationEl.classList.add("hidden");
+          explanationEl.innerHTML = "";
+
+          correctTimer = setTimeout(function () {
+            showQuestion();
+          }, 400);
+        }
+
+        function showFinalPage(isEarlyFinish) {
+          clearCorrectTimer();
+
+          const rows = allQuestions.map(function (q, index) {
+            const mark = masteredWords.has(q.word) ? "○" : "";
+            return `
+              <tr>
+                <td>${index + 1}</td>
+                <td>${mark}</td>
+                <td>${escapeHtml(q.word)}</td>
+                <td>${escapeHtml(q.correct)}</td>
+                <td>${escapeHtml(q.etymology)}</td>
+              </tr>
+            `;
+          }).join("");
+
+          const summaryText = isEarlyFinish
+            ? `途中終了しました。全${totalQuestions}問中 ${masteredWords.size}問正解済みです。`
+            : `全${totalQuestions}問中 ${masteredWords.size}問正解しました。`;
+
+          document.querySelector(".container").innerHTML = `
+            <div class="top-bar" style="margin-bottom:20px;">
+              <div class="top-mini-buttons">
+                <button type="button" class="mini-top-button" onclick="location.href='./index.html'">トップへ戻る</button>
+              </div>
+              <div class="level-label">完了</div>
+            </div>
+
+            <div class="progress">${summaryText}</div>
+
+            <div class="final-table-wrapper">
+              <div class="final-title">${escapeHtml(levelLabelMap[level] || `Level ${level}`)} の全単語一覧</div>
+              <table class="final-table">
+                <thead>
+                  <tr>
+                    <th style="width:70px;">No.</th>
+                    <th style="width:70px;">印</th>
+                    <th>単語</th>
+                    <th>意味</th>
+                    <th>語源</th>
+                  </tr>
+                </thead>
+                <tbody>${rows}</tbody>
+              </table>
+
+              <div class="final-actions">
+                <button class="restart-button" onclick="location.href='./index.html'">トップへ戻る</button>
+              </div>
+            </div>
+          `;
+        }
+
+        finishNowBtnEl.onclick = function () {
+          showFinalPage(true);
+        };
+
+        inlineNextBtnEl.onclick = function () {
+          showQuestion();
+        };
+
+        updateProgress();
+        showQuestion();
+      };
+
+      document.body.appendChild(dataScript);
+    })();
+  </script>
+</body>
+</html>
