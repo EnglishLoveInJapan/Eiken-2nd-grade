@@ -239,7 +239,7 @@ body {
 .explanation {
   background: #ffffff;
   border-radius: 5px;
-  margin-top: 12px;
+  margin-top: 5px;
   padding: 10px 10px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
   line-height: 1.8;
@@ -249,14 +249,14 @@ body {
 .answer-line {
   font-size: 60px;
   font-weight: 900;
-  margin-bottom: 12px;
+  margin-bottom: 3px;
 }
 
 .etymology-line {
   font-size: 26px;
   font-weight: 900;
   color: red;
-  margin-bottom: 12px;
+  margin-bottom: 3px;
 }
 
 .example-block {
