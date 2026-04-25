@@ -45,7 +45,7 @@ window.quizData = [
   {"word": "approve", "correct": "を承認する", "choices": ["を承認する", "に反対する"], "etymology": "アプルーブ（ʌprˈuv）", "example1": "The board approved the budget.", "jp1": "役員会はその予算を承認した。"},
   {"word": "threaten", "correct": "を脅かす", "choices": ["を脅かす", "を調査する"], "etymology": "スレットゥン（θrˈetʌn）", "example1": "Dark clouds threatened rain.", "jp1": "黒い雲が雨を予感させた。"},
   {"word": "decrease", "correct": "減少する", "choices": ["減少する", "を吸収する"], "etymology": "ディクリース（dɪkrˈis）", "example1": "The number of visitors decreased this year.", "jp1": "今年は来訪者数が減少した。"},
-  {"word": "strengthen", "correct": "を強化する", "choices": ["を強化する", "奮闘する"], "etymology": "ストレングン（strˈeŋθʌn）", "example1": "Regular exercise strengthens your muscles.", "jp1": "定期的な運動は筋肉を強くする。"},
+  {"word": "strengthen", "correct": "を強化する", "choices": ["を強化する", "奮闘する"], "etymology": "ストレングスン（strˈeŋθʌn）", "example1": "Regular exercise strengthens your muscles.", "jp1": "定期的な運動は筋肉を強くする。"},
   {"word": "criticize", "correct": "を批判する", "choices": ["を批判する", "を提案する"], "etymology": "クリティサイズ（krˈɪtɪsˌaɪz）", "example1": "It is easy to criticize others.", "jp1": "他人を批判するのは簡単だ。"},
   {"word": "accompany", "correct": "に同行する", "choices": ["に同行する", "減少する"], "etymology": "アカンパニー（ʌkˈʌmpʌni）", "example1": "Children must be accompanied by an adult.", "jp1": "子どもには大人の付き添いが必要だ。"},
   {"word": "explore", "correct": "を探検する", "choices": ["を探検する", "を否定する"], "etymology": "エクスプロア（ɪksplˈɔr）", "example1": "They explored the island on foot.", "jp1": "彼らは歩いてその島を探検した。"},
