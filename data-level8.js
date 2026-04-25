@@ -6,7 +6,6 @@ window.quizData = [
   {"word": "project", "correct": "投影する", "choices": ["投影する", "除外する"], "etymology": "pro = 前へ + ject = 投げる", "example1": "They plan to project the image onto the wall.", "jp1": "彼らはその画像を壁に映し出すつもりだ。"},
   {"word": "object", "correct": "反対する", "choices": ["反対する", "結論づける"], "etymology": "ob = 向かって + ject = 投げる", "example1": "I object to that idea.", "jp1": "私はその考えに反対だ。"},
   {"word": "attract", "correct": "引きつける", "choices": ["引きつける", "隔離する"], "etymology": "at = 〜へ + tract = 引く", "example1": "Flowers attract bees.", "jp1": "花は蜂を引き寄せる。"},
-  {"word": "contract", "correct": "契約する", "choices": ["契約する", "中断する"], "etymology": "con = 共に + tract = 引く", "example1": "The metal contracts in cold weather.", "jp1": "金属は寒いと縮む。"},
   {"word": "extract", "correct": "抜き出す", "choices": ["抜き出す", "噴出する"], "etymology": "ex = 外へ + tract = 引く", "example1": "The machine can extract juice from oranges.", "jp1": "その機械はオレンジから果汁を取り出せる。"},
   {"word": "distract", "correct": "注意をそらす", "choices": ["注意をそらす", "適用する"], "etymology": "dis = 離れて + tract = 引く", "example1": "Loud music distracts me from studying.", "jp1": "大きな音楽は勉強の気を散らす。"},
   {"word": "press", "correct": "押す", "choices": ["押す", "暗に示す"], "etymology": "press = 押す", "example1": "Press the red button.", "jp1": "赤いボタンを押してください。"},
@@ -22,7 +21,6 @@ window.quizData = [
   {"word": "include", "correct": "含む", "choices": ["含む", "予測する"], "etymology": "in = 中に + clud = 閉じる", "example1": "The price includes tax.", "jp1": "その価格には税が含まれている。"},
   {"word": "exclude", "correct": "除外する", "choices": ["除外する", "呼び起こす"], "etymology": "ex = 外へ + clud = 閉じる", "example1": "This ticket excludes dinner.", "jp1": "このチケットには夕食は含まれない。"},
   {"word": "conclude", "correct": "結論づける", "choices": ["結論づける", "取り消す"], "etymology": "con = 共に + clud = 閉じる", "example1": "We concluded that the plan was risky.", "jp1": "私たちはその計画は危険だと結論づけた。"},
-  {"word": "seclude", "correct": "隔離する", "choices": ["隔離する", "描写する"], "etymology": "se = 離れて + clud = 閉じる", "example1": "He secluded himself in the mountains.", "jp1": "彼は山の中にこもった。"},
   {"word": "interrupt", "correct": "中断する", "choices": ["中断する", "購読する"], "etymology": "inter = 間に + rupt = 壊す", "example1": "Do not interrupt me.", "jp1": "私の話をさえぎらないでください。"},
   {"word": "erupt", "correct": "噴出する", "choices": ["噴出する", "処方する"], "etymology": "e = 外へ + rupt = 破る", "example1": "The volcano may erupt again.", "jp1": "その火山は再び噴火するかもしれない。"},
   {"word": "apply", "correct": "適用する", "choices": ["適用する", "サインする"], "etymology": "ap = 〜へ + ply = 重ねる・折る", "example1": "Apply the cream twice a day.", "jp1": "そのクリームを1日に2回塗りなさい。"},
@@ -37,8 +35,6 @@ window.quizData = [
   {"word": "respect", "correct": "尊敬する", "choices": ["尊敬する", "一時停止する"], "etymology": "re = 振り返って + spect = 見る", "example1": "We should respect other cultures.", "jp1": "私たちは他の文化を尊重すべきだ。"},
   {"word": "dictate", "correct": "命じる", "choices": ["命じる", "促進する"], "etymology": "dict = 言う", "example1": "Do not let fear dictate your actions.", "jp1": "恐怖に行動を左右されてはいけない。"},
   {"word": "predict", "correct": "予測する", "choices": ["予測する", "溶ける"], "etymology": "pre = 前に + dict = 言う", "example1": "Nobody can predict the future.", "jp1": "未来を予測できる人はいない。"},
-  {"word": "invoke", "correct": "呼び起こす", "choices": ["呼び起こす", "解決する"], "etymology": "in = 〜へ + voke = 呼ぶ", "example1": "They invoked an old law.", "jp1": "彼らは古い法律を持ち出した。"},
-  {"word": "revoke", "correct": "取り消す", "choices": ["取り消す", "募集する"], "etymology": "re = 戻して + voke = 呼ぶ", "example1": "The school revoked his membership.", "jp1": "学校は彼の会員資格を取り消した。"},
   {"word": "describe", "correct": "描写する", "choices": ["描写する", "定義する"], "etymology": "de = 詳しく + scribe = 書く", "example1": "Can you describe the man?", "jp1": "その男の特徴を説明できますか。"},
   {"word": "subscribe", "correct": "購読する", "choices": ["購読する", "耐える"], "etymology": "sub = 下に + scribe = 書く", "example1": "I subscribe to that magazine.", "jp1": "私はその雑誌を定期購読している。"},
   {"word": "prescribe", "correct": "処方する", "choices": ["処方する", "適応する"], "etymology": "pre = 前もって + scribe = 書く", "example1": "The doctor prescribed some medicine.", "jp1": "医者はいくつか薬を処方した。"},
@@ -66,7 +62,5 @@ window.quizData = [
   {"word": "notice", "correct": "気づく", "choices": ["気づく", "保存する"], "etymology": "not = 印をつける", "example1": "Did you notice the change?", "jp1": "その変化に気づきましたか。"},
   {"word": "ascertain", "correct": "確かめる", "choices": ["確かめる", "解放する"], "etymology": "as = 〜へ + certain = 確かな", "example1": "We need to ascertain the facts first.", "jp1": "まず事実を確かめる必要がある。"},
   {"word": "verify", "correct": "確認する", "choices": ["確認する", "支配する"], "etymology": "ver = 真実 + ify = する", "example1": "Please verify your email address.", "jp1": "メールアドレスを確認してください。"},
-  {"word": "aver", "correct": "断言する", "choices": ["断言する", "同期させる"], "etymology": "ad = 〜へ + ver = 真実", "example1": "He averred that he was innocent.", "jp1": "彼は自分は無実だと断言した。"},
-  {"word": "falsify", "correct": "偽造する", "choices": ["偽造する", "位置づける"], "etymology": "fals = 偽り + ify = する", "example1": "He was accused of falsifying data.", "jp1": "彼はデータを改ざんしたとして非難された。"},
   {"word": "survive", "correct": "生き残る", "choices": ["生き残る", "脱臼させる"], "etymology": "sur = 上に + vive = 生きる", "example1": "Few plants survive in this heat.", "jp1": "この暑さの中で生き残れる植物は少ない。"}
 ];
