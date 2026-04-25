@@ -35,26 +35,56 @@
     </div>
   </main>
 
-  <script>
-    function isLiteMode() {
-      const ua = navigator.userAgent || "";
-      const isiPhone = /iPhone/i.test(ua);
-      const isAndroidPhone = /Android/i.test(ua) && /Mobile/i.test(ua);
-      return isiPhone || isAndroidPhone;
+<script>
+
+  function isLiteMode() {
+
+    const ua = navigator.userAgent || "";
+
+    const isiPhone = /iPhone/i.test(ua);
+
+    const isAndroidPhone = /Android/i.test(ua) && /Mobile/i.test(ua);
+
+    return isiPhone || isAndroidPhone;
+
+  }
+
+  function isLevelComplete(level) {
+
+    return localStorage.getItem(`etymology_quiz_complete_level_${level}`) === "true";
+
+  }
+
+  const liteMode = isLiteMode();
+
+  const pageName = liteMode ? "quiz-lite.html" : "quiz.html";
+
+  document.querySelectorAll(".level-link").forEach(link => {
+
+    const level = link.dataset.level;
+
+    const originalText = link.textContent.trim();
+
+    link.href = `./${pageName}?level=${encodeURIComponent(level)}`;
+
+    if (isLevelComplete(level)) {
+
+      link.textContent = `${originalText} ✅`;
+
+      link.classList.add("level-complete");
+
     }
 
-    const liteMode = isLiteMode();
-    const pageName = liteMode ? "quiz-lite.html" : "quiz.html";
+  });
 
-    document.querySelectorAll(".level-link").forEach(link => {
-      const level = link.dataset.level;
-      link.href = `./${pageName}?level=${encodeURIComponent(level)}`;
-    });
+  document.getElementById("modeInfo").textContent =
 
-    document.getElementById("modeInfo").textContent =
-      liteMode
-        ? "スマホ向けライト版で開きます"
-        : "iPad / PC 向け通常版で開きます";
-  </script>
+    liteMode
+
+      ? "スマホ向けライト版で開きます"
+
+      : "iPad / PC 向け通常版で開きます";
+
+</script>
 </body>
 </html>
