@@ -2,8 +2,8 @@
 // 設定
 // ==============================
 
-const AUTO_NEXT_MS = 3500;
-const SPEAK_LANG = "en-UK";
+const AUTO_NEXT_MS = 4500;
+const SPEAK_LANG = "en-US";
 const TIMER_START = 5;
 const TIMER_STEP_MS = 1000;
 
