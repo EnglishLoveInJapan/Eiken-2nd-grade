@@ -32,59 +32,60 @@
       </div>
 
       <div id="modeInfo" style="text-align:center; margin-top: 14px; font-size:14px; color:#555;"></div>
+      <div style="text-align:center; margin-top: 20px;">
+      <button type="button" id="clearAllBtn" class="restart-button">全レベルの記録を消す</button></div>
+    
     </div>
   </main>
 
 <script>
-
   function isLiteMode() {
-
     const ua = navigator.userAgent || "";
-
     const isiPhone = /iPhone/i.test(ua);
-
     const isAndroidPhone = /Android/i.test(ua) && /Mobile/i.test(ua);
-
     return isiPhone || isAndroidPhone;
-
   }
 
   function isLevelComplete(level) {
-
     return localStorage.getItem(`etymology_quiz_complete_level_${level}`) === "true";
+  }
 
+  function clearAllLevels() {
+    const ok = window.confirm("全レベルの記録を消しますか？");
+    if (!ok) return;
+
+    for (let level = 1; level <= 10; level += 1) {
+      localStorage.removeItem(`etymology_quiz_mastered_level_${level}`);
+      localStorage.removeItem(`etymology_quiz_complete_level_${level}`);
+    }
+
+    location.reload();
   }
 
   const liteMode = isLiteMode();
-
   const pageName = liteMode ? "quiz-lite.html" : "quiz.html";
 
   document.querySelectorAll(".level-link").forEach(link => {
-
     const level = link.dataset.level;
-
     const originalText = link.textContent.trim();
 
     link.href = `./${pageName}?level=${encodeURIComponent(level)}`;
 
     if (isLevelComplete(level)) {
-
       link.textContent = `${originalText} ✅`;
-
       link.classList.add("level-complete");
-
     }
-
   });
 
+  const clearAllBtnEl = document.getElementById("clearAllBtn");
+  if (clearAllBtnEl) {
+    clearAllBtnEl.onclick = clearAllLevels;
+  }
+
   document.getElementById("modeInfo").textContent =
-
     liteMode
-
       ? "スマホ向けライト版で開きます"
-
       : "iPad / PC 向け通常版で開きます";
-
 </script>
 </body>
 </html>
