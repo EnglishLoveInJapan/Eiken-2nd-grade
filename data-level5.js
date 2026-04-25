@@ -49,7 +49,7 @@ window.quizData = [
   {"word": "battle", "correct": "戦い", "choices": ["戦い", "年金"], "etymology": "バトル（bˈætʌl）", "example1": "The battle changed history.", "jp1": "その戦いは歴史を変えた。"},
   {"word": "silence", "correct": "沈黙", "choices": ["沈黙", "運動"], "etymology": "サイレンス（sˈaɪlʌns）", "example1": "The room fell into silence.", "jp1": "部屋は静まり返った。"},
   {"word": "launch", "correct": "開始", "choices": ["開始", "重要性"], "etymology": "ローンチ（lˈɔntʃ）", "example1": "The launch of the product was successful.", "jp1": "その製品の発売は成功した。"},
-  {"word": "direct", "correct": "演出", "choices": ["演出", "地位"], "etymology": "ダイレクト（dɝˈekt）", "example1": "The noun use of direct is rare.", "jp1": "direct の名詞用法はまれだ。"},
+  {"word": "directness", "correct": "率直", "choices": ["演出", "率直"], "etymology": "ディレクトネス（dɪˈrektnəs）", "example1": "The noun use of direct is rare.", "jp1": "direct の名詞用法はまれだ。"},
   {"word": "respect", "correct": "敬意", "choices": ["敬意", "類似"], "etymology": "リスペクト（rɪspˈekt）", "example1": "Children should show respect for others.", "jp1": "子どもは他人に敬意を示すべきだ。"},
   {"word": "contrast", "correct": "対比", "choices": ["対比", "質"], "etymology": "コントラスト（kˈɑntræst）", "example1": "The contrast between the two pictures is clear.", "jp1": "その2枚の絵の対比は明らかだ。"},
   {"word": "debate", "correct": "討論", "choices": ["討論", "注意喚起"], "etymology": "ディベート（dʌbˈeɪt）", "example1": "The debate lasted two hours.", "jp1": "その討論は2時間続いた。"},
