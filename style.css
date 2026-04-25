@@ -219,6 +219,14 @@ body {
   gap: 0px;
   box-sizing: border-box;
 }
+#timerBar {
+  min-height: 24px;
+}
+#timerBar.hidden {
+  visibility: hidden;
+  display: block;
+}
+
 
 .inline-next {
   font-size: 18px;
