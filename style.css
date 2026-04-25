@@ -267,6 +267,24 @@ body {
   display: none;
 }
 
+.message.hidden,
+.explanation.hidden {
+  visibility: hidden;
+  display: flex;
+}
+
+.explanation.hidden {
+  display: block;
+}
+
+.message {
+  min-height: 28px;
+}
+
+.explanation {
+  min-height: 96px;
+}
+
 .final-table-wrapper {
   background: #ffffff;
   border-radius: 16px;
