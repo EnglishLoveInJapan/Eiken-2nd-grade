@@ -507,7 +507,7 @@ if (resetNowBtnEl) {
     explanationEl.classList.remove("hidden");
 
     // 少しだけ見せて次へ
-    scheduleNext(400);
+    scheduleNext(300);
   }
 
 
