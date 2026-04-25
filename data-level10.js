@@ -10,17 +10,17 @@ window.quizData = [
 
   {"word":"confidently","correct":"自信を持って","choices":["自信を持って","控えめに"],"etymology":"コンフィデントリー（kˈɑːnfədəntli）","example1":"She answered the question confidently.","jp1":"彼女はその質問に自信を持って答えた。"},
 
-  {"word":"consequently","correct":"結果として","choices":["結果として","おそらく"],"etymology":"コンシクエントリー（kˈɑːnsəkwentli）","example1":"The road was closed; consequently, we were late.","jp1":"道路が閉鎖され、その結果、私たちは遅れた。"},
+  {"word":"consequently","correct":"結果として","choices":["結果として","おそらく"],"etymology":"コンセクエントリー（kˈɑːnsəkwentli）","example1":"The road was closed; consequently, we were late.","jp1":"道路が閉鎖され、その結果、私たちは遅れた。"},
 
-  {"word":"consistently","correct":"一貫して","choices":["一貫して","一時的に"],"etymology":"コンシステントリー（kənsˈɪstəntli）","example1":"She has consistently worked hard.","jp1":"彼女は一貫して熱心に働いてきた。"},
+  {"word":"consistently","correct":"一貫して","choices":["一貫して","一時的に"],"etymology":"コンスィステントリー（kənsˈɪstəntli）","example1":"She has consistently worked hard.","jp1":"彼女は一貫して熱心に働いてきた。"},
 
   {"word":"currently","correct":"現在","choices":["現在","以前に"],"etymology":"カレントリー（kˈɝːəntli）","example1":"He is currently studying abroad.","jp1":"彼は現在、海外で勉強している。"},
 
-  {"word":"definitely","correct":"確実に","choices":["確実に","おおよそ"],"etymology":"デフィニットリー（dˈefənətli）","example1":"This plan will definitely work.","jp1":"この計画は確実にうまくいくだろう。"},
+  {"word":"definitely","correct":"確実に","choices":["確実に","おおよそ"],"etymology":"デフィニトリー（dˈefənətli）","example1":"This plan will definitely work.","jp1":"この計画は確実にうまくいくだろう。"},
 
-  {"word":"deliberately","correct":"故意に","choices":["故意に","偶然に"],"etymology":"デリバレットリー（dɪlˈɪbərətli）","example1":"He deliberately ignored the warning.","jp1":"彼はその警告を故意に無視した。"},
+  {"word":"deliberately","correct":"故意に","choices":["故意に","偶然に"],"etymology":"デリバレトリー（dɪlˈɪbərətli）","example1":"He deliberately ignored the warning.","jp1":"彼はその警告を故意に無視した。"},
 
-  {"word":"directly","correct":"直接に","choices":["直接に","徐々に"],"etymology":"ダイレクトリー（dərˈektli）","example1":"Please contact me directly.","jp1":"私に直接連絡してください。"},
+  {"word":"directly","correct":"直接に","choices":["直接に","徐々に"],"etymology":"ディレクトリー（dərˈektli）","example1":"Please contact me directly.","jp1":"私に直接連絡してください。"},
 
   {"word":"eagerly","correct":"熱心に","choices":["熱心に","消極的に"],"etymology":"イーガリー（ˈiːɡɚli）","example1":"The students listened eagerly.","jp1":"生徒たちは熱心に聞いた。"},
 
@@ -28,7 +28,7 @@ window.quizData = [
 
   {"word":"entirely","correct":"全く","choices":["全く","少し"],"etymology":"エンタイアリー（ɪntˈaɪɚli）","example1":"I entirely agree with you.","jp1":"私はあなたに全く賛成です。"},
 
-  {"word":"eventually","correct":"最終的に","choices":["最終的に","同時に"],"etymology":"イヴンチュアリー（ɪvˈentʃuəli）","example1":"They eventually found a solution.","jp1":"彼らは最終的に解決策を見つけた。"},
+  {"word":"eventually","correct":"最終的に","choices":["最終的に","同時に"],"etymology":"イヴェンチュリー（ɪvˈentʃuəli）","example1":"They eventually found a solution.","jp1":"彼らは最終的に解決策を見つけた。"},
 
   {"word":"extremely","correct":"非常に","choices":["非常に","比較的"],"etymology":"イクストリームリー（ɪkstrˈiːmli）","example1":"The test was extremely difficult.","jp1":"そのテストは非常に難しかった。"},
 
@@ -36,19 +36,19 @@ window.quizData = [
 
   {"word":"frequently","correct":"頻繁に","choices":["頻繁に","断続的に"],"etymology":"フリークエントリー（frˈiːkwəntli）","example1":"He frequently visits Kyoto.","jp1":"彼は頻繁に京都を訪れる。"},
 
-  {"word":"gently","correct":"優しく","choices":["優しく","厳しく"],"etymology":"ジェントリー（dʒˈentli）","example1":"She gently held the baby.","jp1":"彼女は赤ちゃんを優しく抱いた。"},
+  {"word":"gently","correct":"優しく","choices":["優しく","厳しく"],"etymology":"ぢぇントリー（dʒˈentli）","example1":"She gently held the baby.","jp1":"彼女は赤ちゃんを優しく抱いた。"},
 
-  {"word":"gradually","correct":"徐々に","choices":["徐々に","瞬時に"],"etymology":"グラジュアリー（ɡrˈædʒuəli）","example1":"The weather gradually improved.","jp1":"天気は徐々に良くなった。"},
+  {"word":"gradually","correct":"徐々に","choices":["徐々に","瞬時に"],"etymology":"グラーぢゅアリー（ɡrˈædʒuəli）","example1":"The weather gradually improved.","jp1":"天気は徐々に良くなった。"},
 
   {"word":"greatly","correct":"大いに","choices":["大いに","単に"],"etymology":"グレイトリー（ɡrˈeɪtli）","example1":"Your help was greatly appreciated.","jp1":"あなたの助けは大いに感謝された。"},
 
-  {"word":"honestly","correct":"正直に","choices":["正直に","故意に"],"etymology":"オネストリー（ˈɑːnɪstli）","example1":"Please answer honestly.","jp1":"正直に答えてください。"},
+  {"word":"honestly","correct":"正直に","choices":["正直に","故意に"],"etymology":"アーネストリー（ˈɑːnɪstli）","example1":"Please answer honestly.","jp1":"正直に答えてください。"},
 
   {"word":"illegally","correct":"違法に","choices":["違法に","合法的に"],"etymology":"イリーガリー（ɪlˈiːɡəli）","example1":"The data was illegally copied.","jp1":"そのデータは違法にコピーされた。"},
 
-  {"word":"immediately","correct":"すぐに","choices":["すぐに","最終的に"],"etymology":"イミーディエットリー（ɪmˈiːdiətli）","example1":"Please call me immediately.","jp1":"すぐに私に電話してください。"},
+  {"word":"immediately","correct":"すぐに","choices":["すぐに","最終的に"],"etymology":"イミーディエトリー（ɪmˈiːdiətli）","example1":"Please call me immediately.","jp1":"すぐに私に電話してください。"},
 
-  {"word":"individually","correct":"個別に","choices":["個別に","相互に"],"etymology":"インディヴィジュアリー（ˌɪndəvˈɪdʒuəli）","example1":"Each student was tested individually.","jp1":"それぞれの生徒は個別にテストされた。"},
+  {"word":"individually","correct":"個別に","choices":["個別に","相互に"],"etymology":"インディヴィぢゅアリー（ˌɪndəvˈɪdʒuəli）","example1":"Each student was tested individually.","jp1":"それぞれの生徒は個別にテストされた。"},
 
   {"word":"instantly","correct":"瞬時に","choices":["瞬時に","徐々に"],"etymology":"インスタントリー（ˈɪnstəntli）","example1":"The message appeared instantly.","jp1":"そのメッセージは瞬時に表示された。"},
 
@@ -58,25 +58,25 @@ window.quizData = [
 
   {"word":"mainly","correct":"主に","choices":["主に","部分的に"],"etymology":"メインリー（mˈeɪnli）","example1":"The book is mainly about history.","jp1":"その本は主に歴史について書かれている。"},
 
-  {"word":"manually","correct":"手動で","choices":["手動で","自動的に"],"etymology":"マニュアリー（mˈænjuəli）","example1":"You must enter the data manually.","jp1":"そのデータは手動で入力しなければならない。"},
+  {"word":"manually","correct":"手動で","choices":["手動で","自動的に"],"etymology":"マーニュアリー（mˈænjuəli）","example1":"You must enter the data manually.","jp1":"そのデータは手動で入力しなければならない。"},
 
-  {"word":"meanwhile","correct":"その間に","choices":["その間に","その上"],"etymology":"ミーンワイル（mˈiːnwaɪl）","example1":"She cooked dinner; meanwhile, he cleaned the room.","jp1":"彼女が夕食を作り、その間に彼は部屋を掃除した。"},
+  {"word":"meanwhile","correct":"その間に","choices":["その間に","その上"],"etymology":"ミーンワイウ（mˈiːnwaɪl）","example1":"She cooked dinner; meanwhile, he cleaned the room.","jp1":"彼女が夕食を作り、その間に彼は部屋を掃除した。"},
 
   {"word":"mentally","correct":"精神的に","choices":["精神的に","物理的に"],"etymology":"メンタリー（mˈentəli）","example1":"The work was mentally tiring.","jp1":"その仕事は精神的に疲れるものだった。"},
 
-  {"word":"merely","correct":"単に","choices":["単に","大いに"],"etymology":"ミアリー（mˈɪrli）","example1":"It was merely a suggestion.","jp1":"それは単なる提案だった。"},
+  {"word":"merely","correct":"単に","choices":["単に","大いに"],"etymology":"ミrリー（mˈɪrli）","example1":"It was merely a suggestion.","jp1":"それは単なる提案だった。"},
 
-  {"word":"modestly","correct":"控えめに","choices":["控えめに","大胆に"],"etymology":"モデストリー（mˈɑːdəstli）","example1":"She spoke modestly about her success.","jp1":"彼女は自分の成功について控えめに話した。"},
+  {"word":"modestly","correct":"控えめに","choices":["控えめに","大胆に"],"etymology":"マーデストリー（mˈɑːdəstli）","example1":"She spoke modestly about her success.","jp1":"彼女は自分の成功について控えめに話した。"},
 
-  {"word":"moreover","correct":"その上","choices":["その上","その間に"],"etymology":"モアオーヴァー（mɔːrˈoʊvɚ）","example1":"The plan is simple; moreover, it is cheap.","jp1":"その計画は簡単で、その上、安い。"},
+  {"word":"moreover","correct":"その上","choices":["その上","その間に"],"etymology":"モアオうヴァー（mɔːrˈoʊvɚ）","example1":"The plan is simple; moreover, it is cheap.","jp1":"その計画は簡単で、その上、安い。"},
 
   {"word":"mostly","correct":"ほとんど","choices":["ほとんど","少し"],"etymology":"モウストリー（mˈoʊstli）","example1":"The audience was mostly students.","jp1":"聴衆はほとんど学生だった。"},
 
   {"word":"mutually","correct":"相互に","choices":["相互に","個別に"],"etymology":"ミューチュアリー（mjˈuːtʃuəli）","example1":"The two ideas are mutually connected.","jp1":"その二つの考えは相互に結びついている。"},
 
-  {"word":"nearly","correct":"ほぼ","choices":["ほぼ","完全に"],"etymology":"ニアリー（nˈɪrli）","example1":"The work is nearly finished.","jp1":"その仕事はほぼ終わっている。"},
+  {"word":"nearly","correct":"ほぼ","choices":["ほぼ","完全に"],"etymology":"ニrリー（nˈɪrli）","example1":"The work is nearly finished.","jp1":"その仕事はほぼ終わっている。"},
 
-  {"word":"officially","correct":"公式に","choices":["公式に","率直に"],"etymology":"オフィシャリー（əfˈɪʃəli）","example1":"The results were officially announced.","jp1":"結果は公式に発表された。"},
+  {"word":"officially","correct":"公式に","choices":["公式に","率直に"],"etymology":"əフィシャリー（əfˈɪʃəli）","example1":"The results were officially announced.","jp1":"結果は公式に発表された。"},
 
   {"word":"partially","correct":"部分的に","choices":["部分的に","完全に"],"etymology":"パーシャリー（pˈɑːrʃəli）","example1":"The building was partially damaged.","jp1":"その建物は部分的に損傷した。"},
 
@@ -102,23 +102,23 @@ window.quizData = [
 
   {"word":"routinely","correct":"日常的に","choices":["日常的に","断続的に"],"etymology":"ルーティーンリー（ruːtˈiːnli）","example1":"The machines are routinely inspected.","jp1":"その機械は日常的に点検されている。"},
 
-  {"word":"scientifically","correct":"科学的に","choices":["科学的に","感情的に"],"etymology":"サイエンティフィカリー（ˌsaɪəntˈɪfɪkli）","example1":"The theory was scientifically tested.","jp1":"その理論は科学的に検証された。"},
+  {"word":"scientifically","correct":"科学的に","choices":["科学的に","感情的に"],"etymology":"サイエンティフィクリー（ˌsaɪəntˈɪfɪkli）","example1":"The theory was scientifically tested.","jp1":"その理論は科学的に検証された。"},
 
-  {"word":"seriously","correct":"真剣に","choices":["真剣に","楽しそうに"],"etymology":"シリアスリー（sˈɪriəsli）","example1":"She took the problem seriously.","jp1":"彼女はその問題を真剣に受け止めた。"},
+  {"word":"seriously","correct":"真剣に","choices":["真剣に","楽しそうに"],"etymology":"スィリアスリー（sˈɪriəsli）","example1":"She took the problem seriously.","jp1":"彼女はその問題を真剣に受け止めた。"},
 
-  {"word":"similarly","correct":"同様に","choices":["同様に","直接に"],"etymology":"シミラーリー（sˈɪmələrli）","example1":"The second experiment was similarly successful.","jp1":"二つ目の実験も同様に成功した。"},
+  {"word":"similarly","correct":"同様に","choices":["同様に","直接に"],"etymology":"スィミラーリー（sˈɪmələrli）","example1":"The second experiment was similarly successful.","jp1":"二つ目の実験も同様に成功した。"},
 
   {"word":"simultaneously","correct":"同時に","choices":["同時に","最終的に"],"etymology":"サイマウテイニアスリー（ˌsaɪməlˈteɪniəsli）","example1":"The two events happened simultaneously.","jp1":"その二つの出来事は同時に起こった。"},
 
-  {"word":"sincerely","correct":"誠実に","choices":["誠実に","故意に"],"etymology":"シンシアリー（sɪnsˈɪrli）","example1":"He sincerely apologized.","jp1":"彼は誠実に謝罪した。"},
+  {"word":"sincerely","correct":"誠実に","choices":["誠実に","故意に"],"etymology":"スィンスィrリー（sɪnsˈɪrli）","example1":"He sincerely apologized.","jp1":"彼は誠実に謝罪した。"},
 
   {"word":"slightly","correct":"少し","choices":["少し","完全に"],"etymology":"スライトリー（slˈaɪtli）","example1":"The price increased slightly.","jp1":"価格は少し上がった。"},
 
-  {"word":"statistically","correct":"統計的に","choices":["統計的に","精神的に"],"etymology":"スタティスティカリー（stətˈɪstɪkli）","example1":"The result is statistically significant.","jp1":"その結果は統計的に有意である。"},
+  {"word":"statistically","correct":"統計的に","choices":["統計的に","精神的に"],"etymology":"スタティスティクリー（stətˈɪstɪkli）","example1":"The result is statistically significant.","jp1":"その結果は統計的に有意である。"},
 
   {"word":"technically","correct":"技術的に","choices":["技術的に","合法的に"],"etymology":"テクニカリー（tˈeknɪkli）","example1":"The task is technically difficult.","jp1":"その作業は技術的に難しい。"},
 
-  {"word":"theoretically","correct":"理論上は","choices":["理論上は","実際に"],"etymology":"シオレティカリー（θìːərˈetɪkli）","example1":"Theoretically, the plan should work.","jp1":"理論上は、その計画はうまくいくはずだ。"},
+  {"word":"theoretically","correct":"理論上は","choices":["理論上は","実際に"],"etymology":"セオレティカリー（θìːərˈetɪkli）","example1":"Theoretically, the plan should work.","jp1":"理論上は、その計画はうまくいくはずだ。"},
 
   {"word":"thoroughly","correct":"徹底的に","choices":["徹底的に","部分的に"],"etymology":"サラリー（θˈɝːəli）","example1":"The room was thoroughly cleaned.","jp1":"その部屋は徹底的に掃除された。"},
 
@@ -128,9 +128,9 @@ window.quizData = [
 
   {"word":"anxiously","correct":"不安そうに","choices":["不安そうに","落ち着いて"],"etymology":"アンクシャスリー（ˈæŋkʃəsli）","example1":"He waited anxiously for the result.","jp1":"彼は結果を不安そうに待った。"},
 
-  {"word":"approximately","correct":"おおよそ","choices":["おおよそ","正確に"],"etymology":"アプロクシメットリー（əprˈɑːksəmətli）","example1":"The trip takes approximately two hours.","jp1":"その移動にはおおよそ二時間かかる。"},
+  {"word":"approximately","correct":"おおよそ","choices":["おおよそ","正確に"],"etymology":"アプラークスメトリー（əprˈɑːksəmətli）","example1":"The trip takes approximately two hours.","jp1":"その移動にはおおよそ二時間かかる。"},
 
-  {"word":"accurately","correct":"正確に","choices":["正確に","おおよそ"],"etymology":"アキュレットリー（ˈækjərətli）","example1":"The machine measures temperature accurately.","jp1":"その機械は温度を正確に測る。"},
+  {"word":"accurately","correct":"正確に","choices":["正確に","おおよそ"],"etymology":"アーキュレトリー（ˈækjərətli）","example1":"The machine measures temperature accurately.","jp1":"その機械は温度を正確に測る。"},
 
   {"word":"boldly","correct":"大胆に","choices":["大胆に","控えめに"],"etymology":"ボウルドリー（bˈoʊldli）","example1":"She boldly challenged the old rule.","jp1":"彼女はその古い規則に大胆に挑んだ。"}
 
