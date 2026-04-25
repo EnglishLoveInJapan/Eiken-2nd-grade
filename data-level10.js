@@ -12,8 +12,6 @@ window.quizData = [
 
   {"word":"consequently","correct":"結果として","choices":["結果として","おそらく"],"etymology":"コンシクエントリー（kˈɑːnsəkwentli）","example1":"The road was closed; consequently, we were late.","jp1":"道路が閉鎖され、その結果、私たちは遅れた。"},
 
-  {"word":"consequently","correct":"その結果","choices":["その結果","その上"],"etymology":"コンシクエントリー（kˈɑːnsəkwentli）","example1":"He missed the deadline; consequently, the project was delayed.","jp1":"彼は締め切りに遅れ、その結果、計画が遅れた。"},
-
   {"word":"consistently","correct":"一貫して","choices":["一貫して","一時的に"],"etymology":"コンシステントリー（kənsˈɪstəntli）","example1":"She has consistently worked hard.","jp1":"彼女は一貫して熱心に働いてきた。"},
 
   {"word":"currently","correct":"現在","choices":["現在","以前に"],"etymology":"カレントリー（kˈɝːəntli）","example1":"He is currently studying abroad.","jp1":"彼は現在、海外で勉強している。"},
@@ -30,7 +28,7 @@ window.quizData = [
 
   {"word":"entirely","correct":"全く","choices":["全く","少し"],"etymology":"エンタイアリー（ɪntˈaɪɚli）","example1":"I entirely agree with you.","jp1":"私はあなたに全く賛成です。"},
 
-  {"word":"eventually","correct":"最終的に","choices":["最終的に","同時に"],"etymology":"イヴェンチュアリー（ɪvˈentʃuəli）","example1":"They eventually found a solution.","jp1":"彼らは最終的に解決策を見つけた。"},
+  {"word":"eventually","correct":"最終的に","choices":["最終的に","同時に"],"etymology":"イヴンチュアリー（ɪvˈentʃuəli）","example1":"They eventually found a solution.","jp1":"彼らは最終的に解決策を見つけた。"},
 
   {"word":"extremely","correct":"非常に","choices":["非常に","比較的"],"etymology":"イクストリームリー（ɪkstrˈiːmli）","example1":"The test was extremely difficult.","jp1":"そのテストは非常に難しかった。"},
 
@@ -58,7 +56,7 @@ window.quizData = [
 
   {"word":"legally","correct":"合法的に","choices":["合法的に","違法に"],"etymology":"リーガリー（lˈiːɡəli）","example1":"The company acted legally.","jp1":"その会社は合法的に行動した。"},
 
-  {"word":"mainly","correct":"主に","choices":["主に","完全に"],"etymology":"メインリー（mˈeɪnli）","example1":"The book is mainly about history.","jp1":"その本は主に歴史について書かれている。"},
+  {"word":"mainly","correct":"主に","choices":["主に","部分的に"],"etymology":"メインリー（mˈeɪnli）","example1":"The book is mainly about history.","jp1":"その本は主に歴史について書かれている。"},
 
   {"word":"manually","correct":"手動で","choices":["手動で","自動的に"],"etymology":"マニュアリー（mˈænjuəli）","example1":"You must enter the data manually.","jp1":"そのデータは手動で入力しなければならない。"},
 
@@ -110,7 +108,7 @@ window.quizData = [
 
   {"word":"similarly","correct":"同様に","choices":["同様に","直接に"],"etymology":"シミラーリー（sˈɪmələrli）","example1":"The second experiment was similarly successful.","jp1":"二つ目の実験も同様に成功した。"},
 
-  {"word":"simultaneously","correct":"同時に","choices":["同時に","最終的に"],"etymology":"サイマルテイニアスリー（ˌsaɪməlˈteɪniəsli）","example1":"The two events happened simultaneously.","jp1":"その二つの出来事は同時に起こった。"},
+  {"word":"simultaneously","correct":"同時に","choices":["同時に","最終的に"],"etymology":"サイマウテイニアスリー（ˌsaɪməlˈteɪniəsli）","example1":"The two events happened simultaneously.","jp1":"その二つの出来事は同時に起こった。"},
 
   {"word":"sincerely","correct":"誠実に","choices":["誠実に","故意に"],"etymology":"シンシアリー（sɪnsˈɪrli）","example1":"He sincerely apologized.","jp1":"彼は誠実に謝罪した。"},
 
@@ -122,7 +120,7 @@ window.quizData = [
 
   {"word":"theoretically","correct":"理論上は","choices":["理論上は","実際に"],"etymology":"シオレティカリー（θìːərˈetɪkli）","example1":"Theoretically, the plan should work.","jp1":"理論上は、その計画はうまくいくはずだ。"},
 
-  {"word":"thoroughly","correct":"徹底的に","choices":["徹底的に","部分的に"],"etymology":"サロウリー（θˈɝːəli）","example1":"The room was thoroughly cleaned.","jp1":"その部屋は徹底的に掃除された。"},
+  {"word":"thoroughly","correct":"徹底的に","choices":["徹底的に","部分的に"],"etymology":"サラリー（θˈɝːəli）","example1":"The room was thoroughly cleaned.","jp1":"その部屋は徹底的に掃除された。"},
 
   {"word":"annually","correct":"毎年","choices":["毎年","毎日"],"etymology":"アニュアリー（ˈænjuəli）","example1":"The festival is held annually.","jp1":"その祭りは毎年開かれる。"},
 
