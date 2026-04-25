@@ -28,7 +28,6 @@ window.quizData = [
   {"word": "biodegradable", "correct": "生分解性の", "choices": ["生分解性の", "民主的な"], "etymology": "bio = 命 + degradable = 分解できる", "example1": "We should use biodegradable bags.", "jp1": "私たちは生分解性の袋を使うべきだ。"},
   {"word": "antibiotic", "correct": "抗生物質の", "choices": ["抗生物質の", "人口統計の"], "etymology": "anti = 反対 + bio = 命", "example1": "The doctor prescribed an antibiotic.", "jp1": "医者は抗生物質を処方した。"},
   {"word": "corporal", "correct": "身体の", "choices": ["身体の", "一時的な"], "etymology": "corp = 体", "example1": "Many schools banned corporal punishment.", "jp1": "多くの学校は体罰を禁止した。"},
-  {"word": "psychic", "correct": "心の", "choices": ["心の", "同時代の"], "etymology": "psych = 心", "example1": "Some people claim to have psychic powers.", "jp1": "自分には霊能力があると主張する人もいる。"},
   {"word": "regular", "correct": "規則的な", "choices": ["規則的な", "時間の"], "etymology": "reg = まっすぐにする", "example1": "Regular exercise is important.", "jp1": "定期的な運動は大切だ。"},
   {"word": "legal", "correct": "合法の", "choices": ["合法の", "地球の"], "etymology": "leg = 法", "example1": "Is it legal to park here?", "jp1": "ここに駐車するのは合法ですか。"},
   {"word": "legitimate", "correct": "正当な", "choices": ["正当な", "水力発電の"], "etymology": "leg = 法", "example1": "That is a legitimate concern.", "jp1": "それは正当な懸念だ。"},
