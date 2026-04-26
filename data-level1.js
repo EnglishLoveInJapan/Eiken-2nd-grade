@@ -7,7 +7,7 @@ window.quizData = [
   {"word":"appreciate","correct":"を感謝する","choices":["を感謝する","を受け継ぐ"],"etymology":"アプリシエイト（ʌprˈiʃiˌeɪt）","example1":"I really appreciate your help.","jp1":"私はあなたの助けに本当に感謝している。"},
   {"word":"compensate","correct":"に埋め合わせをする","choices":["に埋め合わせをする","参加する"],"etymology":"カンペンセイト（kˈɑmpʌnsˌeɪt）","example1":"The company compensated workers for the damage.","jp1":"その会社は損害に対して労働者に補償をした。"},
   {"word":"ignore","correct":"を無視する","choices":["を無視する","を暗記する"],"etymology":"イグノア（ˌɪɡnˈɔr）","example1":"He ignored my advice.","jp1":"彼は私の助言を無視した。"},
-  {"word":"emerge","correct":"現れる","choices":["現れる","申し込む"],"etymology":"イマーぢ（ɪmˈɝdʒ）","example1":"New problems emerged after the meeting.","jp1":"会議のあとで新しい問題が生じた。"},
+  {"word":"emerge","correct":"現れる","choices":["現れる","申し込む"],"etymology":"イマɜːぢ（ɪmˈɝdʒ）","example1":"New problems emerged after the meeting.","jp1":"会議のあとで新しい問題が生じた。"},
   {"word":"oppose","correct":"に反対する","choices":["に反対する","を生み出す"],"etymology":"オポウズ（ʌpˈoʊz）","example1":"Many people opposed the plan.","jp1":"多くの人がその計画に反対した。"},
   {"word":"investigate","correct":"を調査する","choices":["を調査する","を大きくする"],"etymology":"インベステゲイト（ˌɪnvˈestʌɡˌeɪt）","example1":"Police are investigating the accident.","jp1":"警察はその事故を調査している。"},
   {"word":"absorb","correct":"を吸収する","choices":["を吸収する","を破壊する"],"etymology":"アブゾーブ（ʌbzˈɔrb）","example1":"Plants absorb water through their roots.","jp1":"植物は根を通して水を吸収する。"},
